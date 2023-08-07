@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'old_standard': ['Old Standard TT', 'serif']
+       },
+      colors: {
+        base: {
+          cyan: '#BAF1E4',
+          red: '#F4908A'
+        },
+      }
+    },
   },
   plugins: [],
 }

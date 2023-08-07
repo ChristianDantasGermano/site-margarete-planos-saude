@@ -8,7 +8,7 @@ export default function AppRouter() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='prato/:id' element={<Home />} />
+          <Route path='/' element={<Home />} />
         </Routes>
       </Router>
     </main>
