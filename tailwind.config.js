@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'old_standard': ['Old Standard TT', 'serif']
+        'old_standard':['Old Standard TT', 'serif'],
+        'advent_pro': ['Advent Pro', 'sans-serif'],
+        'belleza': ['Belleza', 'sans-serif'],
+        'tenor_Sans': ['Tenor Sans', 'sans-serif'],
+        'antic_didone': ['Antic Didone', 'serif']
        },
       colors: {
         base: {
