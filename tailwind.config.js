@@ -15,8 +15,8 @@ export default {
        },
       colors: {
         base: {
-          cyan: '#BAF1E4',
-          red: '#F4908A'
+          primary: '#F4EFEC',
+          secondary: '#F0D9D1'
         },
       }
     },
