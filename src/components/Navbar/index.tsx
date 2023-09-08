@@ -21,22 +21,32 @@ export default function Navbar() {
 
     return (
         <Menu>
-            <nav className='bg-base-secondary items-center flex lg:grid lg:grid-cols-2 py-5 lg:justify-center drop-shadow-lg'>
+            <nav className='bg-base-primary items-center flex lg:grid lg:grid-cols-2 py-5 lg:py-8 lg:justify-center drop-shadow-lg'>
                 <div className='flex-grow'>
-                    <img className='pl-12 max-h-12 lg:max-h-24  lg:max-w-md' src={Logo} />
+                    <img className='pl-12 max-h-12 lg:max-h-12 lg:max-w-md' src={Logo} />
                 </div>
                 <ul className='flex-none hidden lg:flex items-center gap-16 '>
                     {rotas.map((rota, index) => (
-                        <li key={index} className="font-belleza text-3xl">
-                            {rota.label}
-                        </li>
+                        <a href='#'>
+                            <li key={index} className="transition ease-in-out delay-50 
+                              hover:scale-110 duration-100 font-belleza
+                               text-2xl uppercase active:text-neutral-600">
+                                {rota.label}
+                            </li>
+                        </a>
                     ))}
                 </ul>
                 <section className='flex-none lg:hidden mr-5'>
-                    <Menu.Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>{}
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
+                    <Menu.Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                        {isMobileMenuOpen ?
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            :
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        }
                     </Menu.Button>
                 </section>
             </nav>
@@ -50,11 +60,12 @@ export default function Navbar() {
                 leaveTo="-translate-x-full"
             >
                 <Menu.Items static>
-                    <div className='z-auto shadow-md bg-base-secondary h-screen w-full absolute flex flex-col'>
+                    <div className='z-auto shadow-md bg-base-primary h-screen w-full absolute flex flex-col'>
                         <ul className='flex flex-col items-start pl-8 pt-12 divide-y divide-solid divide-neutral-600'>
                             {rotas.map((rota, index) => (
-                                <Menu.Item key={index}>
-                                    <li key={index} className="p-4 w-11/12 font-belleza font-normal text-2xl">
+                                <Menu.Item key={index} >
+                                    <li key={index} onClick={() => setIsMobileMenuOpen(false)}
+                                        className="active:bg-base-secondary p-4 w-11/12 font-belleza font-normal text-xl uppercase">
                                         {rota.label}
                                     </li>
                                 </Menu.Item>
@@ -64,6 +75,5 @@ export default function Navbar() {
                 </Menu.Items>
             </Transition>
         </Menu>
-
     );
 }
