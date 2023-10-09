@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Logo from "../../assets/images/logo.png"
-import { Menu } from "@headlessui/react"
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -24,7 +23,7 @@ export default function Navbar() {
   ]
 
   return (
-    <Menu>
+    <>
       <nav className="bg-base-primary items-center flex lg:grid lg:grid-cols-2 py-5 lg:py-8 lg:justify-center drop-shadow-lg">
         <div className="flex-grow">
           <img className="pl-12 max-h-12 lg:max-h-12 lg:max-w-md" src={Logo} />
@@ -43,9 +42,9 @@ export default function Navbar() {
           ))}
         </ul>
         <section className="flex-none lg:hidden mr-5">
-          <Menu.Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <svg
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -61,6 +60,7 @@ export default function Navbar() {
               </svg>
             ) : (
               <svg
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -75,33 +75,26 @@ export default function Navbar() {
                 />
               </svg>
             )}
-          </Menu.Button>
         </section>
       </nav>
-      {isMobileMenuOpen && (
-        <Menu.Items static>
-          <div
-            className={`z-50 absolute flex flex-col shadow-md bg-base-primary h-screen w-full
-             transform translate-x-full ease-in-out duration-300 ${
-              isMobileMenuOpen ? " translate-x-1 " : " translate-x-full"
-            }`}
-          >
-            <ul className="flex flex-col items-start pl-8 pt-12 divide-y divide-solid divide-neutral-600">
-              {rotas.map((rota, index) => (
-                <Menu.Item key={index}>
-                  <li
-                    key={index}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="active:bg-base-secondary p-4 w-11/12 font-belleza font-normal text-xl uppercase"
-                  >
-                    {rota.label}
-                  </li>
-                </Menu.Item>
-              ))}
-            </ul>
-          </div>
-        </Menu.Items>
-      )}
-    </Menu>
+              <div
+              className={`z-50 absolute flex flex-col shadow-md bg-base-primary h-screen w-full
+               transform translate-x-full ease-in-out duration-300 ${
+                isMobileMenuOpen ? " translate-x-0 " : " translate-x-full"
+              }`}
+            >
+              <ul className="flex flex-col items-start pl-8 pt-12 divide-y divide-solid divide-neutral-600">
+                {rotas.map((rota, index) => (
+                    <li
+                      key={index}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="active:bg-base-secondary p-4 w-11/12 font-belleza font-normal text-xl uppercase"
+                    >
+                      {rota.label}
+                    </li>
+                ))}
+              </ul>
+            </div>
+        </>
   )
 }
