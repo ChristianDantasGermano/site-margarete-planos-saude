@@ -1,16 +1,17 @@
 import { useState } from "react"
 import Logo from "../../assets/images/logo.png"
+import { Link } from "react-router-dom"
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const rotas = [
     {
       label: "Home",
-      to: "#",
+      to: "/",
     },
     {
       label: "Blog",
-      to: "#",
+      to: "/blog",
     },
     {
       label: "E-mail",
@@ -24,13 +25,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-base-primary items-center flex lg:grid lg:grid-cols-2 py-5 lg:py-8 lg:justify-center drop-shadow-lg">
+      <nav className="z-50 bg-base-primary items-center flex w-full lg:grid lg:grid-cols-2 py-5 
+      lg:py-8 lg:justify-center drop-shadow-lg">
         <div className="flex-grow">
-          <img className="pl-12 max-h-12 lg:max-h-12 lg:max-w-md" src={Logo} />
+          <img className="pl-8 max-h-12 lg:max-h-16 lg:max-w-md" src={Logo} />
         </div>
         <ul className="flex-none hidden lg:flex items-center gap-16 ">
           {rotas.map((rota, index) => (
-            <a key={index} href="#">
+              <Link key={index} to={rota.to}>
               <li
                 className="transition ease-in-out delay-50 
                               hover:scale-110 duration-100 font-belleza
@@ -38,7 +40,7 @@ export default function Navbar() {
               >
                 {rota.label}
               </li>
-            </a>
+              </Link>
           ))}
         </ul>
         <section className="flex-none lg:hidden mr-5">
@@ -78,9 +80,9 @@ export default function Navbar() {
         </section>
       </nav>
               <div
-              className={`z-50 absolute flex flex-col shadow-md bg-base-primary h-screen w-full
+              className={`lg:hidden z-50 absolute flex flex-col shadow-md bg-base-primary h-screen w-full
                transform translate-x-full ease-in-out duration-300 ${
-                isMobileMenuOpen ? " translate-x-0 " : " translate-x-full"
+                isMobileMenuOpen ? " translate-x-1 " : " translate-x-full"
               }`}
             >
               <ul className="flex flex-col items-start pl-8 pt-12 divide-y divide-solid divide-neutral-600">
