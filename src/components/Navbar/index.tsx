@@ -25,12 +25,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="z-50 bg-base-primary items-center flex w-full lg:grid lg:grid-cols-2 py-5 
+      <nav className="z-50 bg-base-primary items-center flex w-full py-5 
       lg:py-8 lg:justify-center drop-shadow-lg">
-        <div className="flex-grow">
-          <img className="pl-8 max-h-12 lg:max-h-16 lg:max-w-md" src={Logo} />
+        <div className="flex-none pr-16">
+          <img className="pr-16 max-h-12 lg:max-h-16 lg:max-w-lg " src={Logo} />
         </div>
-        <ul className="flex-none hidden lg:flex items-center gap-16 ">
+        <ul className="flex-none hidden lg:flex items-center gap-32 ">
           {rotas.map((rota, index) => (
               <Link key={index} to={rota.to}>
               <li
