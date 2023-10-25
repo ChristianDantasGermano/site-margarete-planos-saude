@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="z-50 bg-base-primary items-center flex w-full py-5 
-      lg:py-8 lg:justify-center drop-shadow-lg">
+      lg:py-8 lg:justify-center drop-shadow-2xl">
         <div className="flex-none pr-16">
           <img className="pr-16 max-h-12 lg:max-h-16 lg:max-w-lg " src={Logo} />
         </div>

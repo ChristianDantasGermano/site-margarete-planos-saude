@@ -24,7 +24,7 @@ export default function Slider() {
     ]
 
     return (
-      <div className=''>
+      <div className='z-0'>
         <Carousel pauseOnHover>
           {
             images.map((image)=>(

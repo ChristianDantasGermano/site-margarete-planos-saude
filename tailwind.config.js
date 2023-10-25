@@ -12,9 +12,10 @@ export default {
       },
       colors: {
         base: {
-          primary: "#EBE8F2",
-          secondary: "#D6D1E5",
-          tertiary: "#ADA2CA",
+          primary: "#F0DBDB",
+          secondary: "#F5EBE0",
+          tertiary: "#DBA39A",
+          base: "#FEFCF3",
         },
       },
     },
