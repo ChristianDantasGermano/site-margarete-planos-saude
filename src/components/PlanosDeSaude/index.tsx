@@ -1,47 +1,50 @@
-import { ReactNode } from "react"
+import { ReactNode, useState } from "react"
+import CardPlanoSaude from "./components/CardPlanoSaude";
+
+export const planoLogos = [
+  {
+    src: "../PlanosIcons/amil_facil.png",
+  },
+  {
+    src: "../PlanosIcons/Amil_logo.png",
+  },
+  {
+    src: "../PlanosIcons/ana_costa_saude.png",
+  },
+  {
+    src: "../PlanosIcons/blueMea.png",
+  },
+  {
+    src: "../PlanosIcons/bradesco_saude_logo.png",
+  },
+  {
+    src: "../PlanosIcons/logo_blue_med_senior.png",
+  },
+  {
+    src: "../PlanosIcons/notredame_intermedica.png",
+  },
+  {
+    src: "../PlanosIcons/porto_saude.png",
+  },
+  {
+    src: "../PlanosIcons/trasmontano_saude.png",
+  },
+  {
+    src: "../PlanosIcons/Prevent_Senior_logo.png",
+  },
+  {
+    src: "../PlanosIcons/santaCasaSantos.png",
+  },
+  {
+    src: "../PlanosIcons/sulamerica_saude_logo.png",
+  },
+  {
+    src: "../PlanosIcons/unimed_santos.png",
+  },
+]
 
 export default function PlanoSaudeOptions() {
-  const planoLogos = [
-    {
-      src: "../PlanosIcons/amil_facil.png",
-    },
-    {
-      src: "../PlanosIcons/Amil_logo.png",
-    },
-    {
-      src: "../PlanosIcons/ana_costa_saude.png",
-    },
-    {
-      src: "../PlanosIcons/blueMea.png",
-    },
-    {
-      src: "../PlanosIcons/bradesco_saude_logo.png",
-    },
-    {
-      src: "../PlanosIcons/logo_blue_med_senior.png",
-    },
-    {
-      src: "../PlanosIcons/notredame_intermedica.png",
-    },
-    {
-      src: "../PlanosIcons/porto_saude.png",
-    },
-    {
-      src: "../PlanosIcons/trasmontano_saude.png",
-    },
-    {
-      src: "../PlanosIcons/Prevent_Senior_logo.png",
-    },
-    {
-      src: "../PlanosIcons/santaCasaSantos.png",
-    },
-    {
-      src: "../PlanosIcons/sulamerica_saude_logo.png",
-    },
-    {
-      src: "../PlanosIcons/unimed_santos.png",
-    },
-  ]
+  const [showSaberMais, setShowSaberMais] = useState(false);
 
   const planosList = (): ReactNode | null => {
     let tempPlanoList = [...planoLogos]
@@ -59,14 +62,10 @@ export default function PlanoSaudeOptions() {
 
   const colList = (planos: typeof planoLogos): ReactNode | null => {
     return (
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 ">
         {planos.map((planos, index) => (
-          <div className="flex justify-center items-center shadow-lg p-6 h-40 rounded-md">
-            <img
-              className="object-contain max-h-36"
-              key={index}
-              src={planos.src}
-            />
+          <div className="flex flex-col">
+            <CardPlanoSaude index={index} planos={planos} />
           </div>
         ))}
       </div>
