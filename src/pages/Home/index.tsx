@@ -1,6 +1,6 @@
-import Slider from "../../components/Carroceu"
-import Logo from "../../assets/images/logo.png"
-import PlanoSaudeOptions from "../../components/PlanosDeSaude"
+import Slider from "../../components/Carroceu";
+import Logo from "../../assets/images/logo.png";
+import PlanoSaudeOptions from "../../components/PlanosDeSaude";
 
 function Home() {
   return (
@@ -46,33 +46,33 @@ function Home() {
             <div className="grid grid-cols-3 gap-6 mt-5 mx-16 ">
               <div className="flex flex-col gap-6">
                 <div>
-                  <h6 className="text-base-base font-semibold">Contratação</h6>
-                  <p className="text-base-base">
+                  <h6 className="text-base-base font-semibold font-belleza">Contratação</h6>
+                  <p className="text-base-base font-belleza">
                     e cotação 100% online de acordo com seu perfil
                   </p>
                 </div>
                 <div>
-                  <h6 className="text-base-base font-semibold">
+                  <h6 className="text-base-base font-semibold font-belleza">
                     Melhores preços
                   </h6>
-                  <p className="text-base-base">Cotação Online</p>
+                  <p className="text-base-base font-belleza">Cotação Online</p>
                 </div>
               </div>
               <div className="flex flex-col gap-6">
                 <div>
-                  <h6 className="text-base-base font-semibold">
+                  <h6 className="text-base-base font-semibold font-belleza">
                     Relacionamento
                   </h6>
-                  <p className="text-base-base">
+                  <p className="text-base-base font-belleza">
                     personalizado e pessoal sempre visando atender suas
                     necessidades
                   </p>
                 </div>
                 <div>
-                  <h6 className="text-base-base font-semibold">
+                  <h6 className="text-base-base font-semibold font-belleza">
                     Soluções de acordo
                   </h6>
-                  <p className="text-base-base">
+                  <p className="text-base-base font-belleza">
                     com sua necessidades através das melhores operadoras com o
                     melhor custo benefício
                   </p>
@@ -80,18 +80,18 @@ function Home() {
               </div>
               <div className="flex flex-col gap-6">
                 <div>
-                  <h6 className="text-base-base font-semibold">
+                  <h6 className="text-base-base font-semibold font-belleza">
                     Mais de 15 anos
                   </h6>
-                  <p className="text-base-base">
+                  <p className="text-base-base font-belleza">
                     no Mercado de Seguro e Planos de Saúde
                   </p>
                 </div>
                 <div>
-                  <h6 className="text-base-base font-semibold">
+                  <h6 className="text-base-base font-semibold font-belleza">
                     Atendimento pessoal
                   </h6>
-                  <p className="text-base-base">
+                  <p className="text-base-base font-belleza">
                     aqui você fala com a gente de verdade através de whatsapp,
                     telefone e email
                   </p>
@@ -103,7 +103,7 @@ function Home() {
       </div>
       <PlanoSaudeOptions />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
