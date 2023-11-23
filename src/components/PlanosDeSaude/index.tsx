@@ -117,8 +117,6 @@ export const planoLogos = [
 ];
 
 export default function PlanoSaudeOptions() {
-  const [showSaberMais, setShowSaberMais] = useState(false);
-
   const planosList = (): ReactNode | null => {
     let tempPlanoList = [...planoLogos];
     let col01 = tempPlanoList.splice(0, 4);

@@ -68,9 +68,18 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ index, planos }) => {
               </p>
             )}
           </div>
-          <button className="bg-base-tertiary font-belleza font-semibold text-2xl p-2 w-1/3 shadow-lg hover:shadow-2xl">
-            Saber mais
-          </button>
+          <motion.div
+            className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center"
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.5 },
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <button className="font-belleza text-2xl hover: scale-105">
+              Saber mais
+            </button>
+          </motion.div>
         </div>
       </Modal>
     </>
