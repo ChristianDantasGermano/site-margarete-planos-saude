@@ -46,7 +46,9 @@ function Home() {
             <div className="grid grid-cols-3 gap-6 mt-5 mx-16 ">
               <div className="flex flex-col gap-6">
                 <div>
-                  <h6 className="text-base-base font-semibold font-belleza">Contratação</h6>
+                  <h6 className="text-base-base font-semibold font-belleza">
+                    Contratação
+                  </h6>
                   <p className="text-base-base font-belleza">
                     e cotação 100% online de acordo com seu perfil
                   </p>
@@ -102,6 +104,7 @@ function Home() {
         </div>
       </div>
       <PlanoSaudeOptions />
+      <div id="modal-portal"></div>
     </div>
   );
 }

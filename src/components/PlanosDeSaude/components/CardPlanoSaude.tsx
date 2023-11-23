@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { planoLogos } from "..";
-import { AnimatePresence, motion } from "framer-motion";
-import { Button, Modal } from "flowbite-react";
+import { motion } from "framer-motion";
+import { Modal } from "../../Modal";
 
 type CardPlanoSaude = {
   index: number;
@@ -49,49 +49,30 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ index, planos }) => {
           </motion.div>
         </div>
       </motion.div>
-      <AnimatePresence>
-        {openModal && (
-          <motion.div
-            key="modal"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-          >
-            <Modal
-              show={openModal}
-              size="4xl"
-              onClose={() => setOpenModal(false)}
-              popup
-            >
-              <Modal.Header />
-              <Modal.Body>
-                <div className="flex flex-col justify-center items-center">
-                  <img
-                    className="object-contain max-h-28 max-w-xs"
-                    key={index}
-                    src={planos.src}
-                  />
-                  <div className="p-2 m-2">
-                    {planos.paragrafos?.map((value) => (
-                      <p className="indent-8 font-belleza text-left p-1 text-lg">
-                        {value}
-                      </p>
-                    ))}
-                    {planos.obs && (
-                      <p className="font-belleza text-left font-semibold p-1 text-lg">
-                        {planos.obs}
-                      </p>
-                    )}
-                  </div>
-                  <button className="bg-base-tertiary font-belleza font-semibold text-2xl p-2 w-1/3 shadow-lg hover:shadow-2xl">
-                    Saber mais
-                  </button>
-                </div>
-              </Modal.Body>
-            </Modal>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Modal isOpen={openModal} handleClose={() => setOpenModal(false)}>
+        <div className="flex flex-col justify-center items-center">
+          <img
+            className="object-contain max-h-28 max-w-xs"
+            key={index}
+            src={planos.src}
+          />
+          <div className="p-2 m-2">
+            {planos.paragrafos?.map((value) => (
+              <p className="indent-8 font-belleza text-left p-1 text-lg">
+                {value}
+              </p>
+            ))}
+            {planos.obs && (
+              <p className="font-belleza text-left font-semibold p-1 text-lg">
+                {planos.obs}
+              </p>
+            )}
+          </div>
+          <button className="bg-base-tertiary font-belleza font-semibold text-2xl p-2 w-1/3 shadow-lg hover:shadow-2xl">
+            Saber mais
+          </button>
+        </div>
+      </Modal>
     </>
   );
 };
