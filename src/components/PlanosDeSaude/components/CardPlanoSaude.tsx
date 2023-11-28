@@ -69,12 +69,12 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ index, planos }) => {
             )}
           </div>
           <motion.div
-            className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center"
+            className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center cursor-pointer"
             whileHover={{
               scale: 1.05,
-              transition: { duration: 0.5 },
+              transition: { duration: 0.2 },
             }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 1 }}
           >
             <button className="font-belleza text-2xl hover: scale-105">
               Saber mais
