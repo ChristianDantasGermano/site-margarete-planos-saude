@@ -135,8 +135,8 @@ export default function PlanoSaudeOptions() {
     return (
       <div className="flex flex-col gap-6 ">
         {planos.map((plano, index) => (
-          <div className="flex flex-col">
-            <CardPlanoSaude key={index} planos={plano} />
+          <div key={index} className="flex flex-col">
+            <CardPlanoSaude planos={plano} />
           </div>
         ))}
       </div>
