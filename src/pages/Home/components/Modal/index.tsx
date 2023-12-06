@@ -61,7 +61,7 @@ const ModalContent = ({
     role="dialog"
     aria-modal={true}
     aria-label={ariaLabel}
-    className={`relative max-w-3xl ${
+    className={`relative max-w-4xl ${
       className || "m-5 p-5 bg-white rounded-lg shadow-lg"
     }`}
     variants={effect}

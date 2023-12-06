@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import CardPlanoSaude from "./components/CardPlanoSaude";
 
 export const planoLogos = [
@@ -136,7 +136,7 @@ export default function PlanoSaudeOptions() {
       <div className="flex flex-col gap-6 ">
         {planos.map((plano, index) => (
           <div className="flex flex-col">
-            <CardPlanoSaude index={index} planos={plano} />
+            <CardPlanoSaude key={index} planos={plano} />
           </div>
         ))}
       </div>

@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { Modal } from "../../Modal";
 
 type CardPlanoSaude = {
-  index: number;
   planos: (typeof planoLogos)[0];
 };
 
-const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ index, planos }) => {
+const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
   const animateSaberMaisHide = -35;
   const animateSaberMaisShow = 0;
 
@@ -26,15 +25,14 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ index, planos }) => {
       >
         <div className="flex flex-col">
           <div
-            className="flex flex-col bg-base-base justify-center items-center shadow-lg p-8 h-40
+            className="flex flex-col bg-white justify-center items-center shadow-lg p-4 h-32 2xl:h-44 w-full
              rounded z-10 cursor-pointer"
             onMouseOver={() => setSaberMais(animateSaberMaisShow)}
             onMouseOut={() => setSaberMais(animateSaberMaisHide)}
             onClick={() => setOpenModal(true)}
           >
             <img
-              className="object-contain max-h-32 max-w-xs"
-              key={index}
+              className="w-full object-scale-down min-h-0"
               src={planos.src}
             />
           </div>
@@ -51,14 +49,13 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ index, planos }) => {
       </motion.div>
       <Modal isOpen={openModal} handleClose={() => setOpenModal(false)}>
         <div className="flex flex-col justify-center items-center">
-          <img
-            className="object-contain max-h-28 max-w-xs"
-            key={index}
-            src={planos.src}
-          />
+          <img className="object-contain max-h-28 max-w-xs" src={planos.src} />
           <div className="p-2 m-2">
-            {planos.paragrafos?.map((value) => (
-              <p className="indent-8 font-belleza text-left p-1 text-lg">
+            {planos.paragrafos?.map((value, index) => (
+              <p
+                key={index}
+                className="indent-8 font-belleza text-left p-1 text-lg"
+              >
                 {value}
               </p>
             ))}
