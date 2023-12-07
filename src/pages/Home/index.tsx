@@ -6,7 +6,7 @@ import Caracteristicas from "./components/Caracteristicas";
 
 function Home() {
   return (
-    <div className="z-0 bg-base-base h-screen">
+    <div className="z-0 bg-base-base flex-grow ">
       <Slider />
       <Apresentacao />
       <Caracteristicas />
