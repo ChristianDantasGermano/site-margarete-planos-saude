@@ -50,7 +50,7 @@ export default function TipoPlanos() {
       <div className="flex gap-6">
         <div className="flex flex-col p-12">
           {tipoPlanos.map((beneficio, index) => (
-            <div className="flex gap-8 m-4" key={index}>
+            <div className="flex gap-8 m-2" key={index}>
               {index % 2 === 0 && (
                 <div className="max-w-xs">
                   <img
@@ -59,7 +59,7 @@ export default function TipoPlanos() {
                   />
                 </div>
               )}
-              <div className="flex flex-col flex-grow">
+              <div className="flex flex-col flex-grow p-4 m-2">
                 <h1 className="font-belleza text-6xl font-semibold text-base-base pt-16">
                   {beneficio.titulo}
                 </h1>
