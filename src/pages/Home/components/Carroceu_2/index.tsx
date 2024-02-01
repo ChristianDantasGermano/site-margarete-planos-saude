@@ -1,6 +1,34 @@
 import { LayoutGroup, motion } from "framer-motion";
 import { MouseEventHandler, useState } from "react";
 import { CarouselFrame, pages } from "./components/carouselFrame";
+import {
+  MdOutlineArrowBackIosNew,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
+
+const DirectionsArrow = ({
+  currentPage,
+  setPage,
+}: {
+  currentPage: number;
+  setPage: Function;
+}) => {
+  // Wrap all the pagination Indicators
+  // with AnimateSharedPresence
+  // so we can detect when Indicators
+  // with a layoutId are removed/added
+  return (
+    <LayoutGroup id="b">
+      <div className="absolute top-1/2 w-full h-auto">
+        <div className="flex max-w-full h-auto">
+          <div className="z-10 w-full h-auto">
+            <DirectionController currentPage={currentPage} setPage={setPage} />
+          </div>
+        </div>
+      </div>
+    </LayoutGroup>
+  );
+};
 
 const Pagination = ({
   currentPage,
@@ -14,15 +42,17 @@ const Pagination = ({
   // so we can detect when Indicators
   // with a layoutId are removed/added
   return (
-    <LayoutGroup id="a">
-      <div className="flex justify-center items-center mt-0">
-        {pages.map((page) => (
-          <Indicator
-            key={page}
-            onClick={() => setPage(page)}
-            isSelected={page === currentPage}
-          />
-        ))}
+    <LayoutGroup id="b">
+      <div className="flex justify-center items-center ">
+        <div className="z-10 bg-base-tertiary bg-opacity-60 flex justify-center items-center rounded-full shadow-lg">
+          {pages.map((page) => (
+            <Indicator
+              key={page}
+              onClick={() => setPage(page)}
+              isSelected={page === currentPage}
+            />
+          ))}
+        </div>
       </div>
     </LayoutGroup>
   );
@@ -36,18 +66,49 @@ const Indicator = ({
   onClick: MouseEventHandler;
 }) => {
   return (
-    <div className="p-5 cursor-pointer" onClick={onClick}>
-      <div className="relative w-3 h-3 bg-base-tertiary rounded-full ">
+    <div className="p-4 cursor-pointer" onClick={onClick}>
+      <div className="relative w-2 h-2 bg-base-base  rounded-full ">
         {isSelected && (
           // By setting layoutId, when this component
           // is removed and a new one is added elsewhere,
           // the new component will animate out from the old one.
           <motion.div
-            className="z-10 absolute -top-2 bg-base-secondary rounded-full w-3 h-1"
+            className="z-10 absolute -top-2 bg-base-primary rounded-full w-2 h-1"
             layoutId="highlight"
           />
         )}
       </div>
+    </div>
+  );
+};
+
+const DirectionController = ({
+  currentPage,
+  setPage,
+}: {
+  currentPage: number;
+  setPage: Function;
+}) => {
+  return (
+    <div className="flex w-full h-auto p-4">
+      <div className="flex-1 justify-center items-center">
+        {currentPage > 0 && (
+          <div
+            className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-xl cursor-pointer"
+            onClick={() => setPage(currentPage - 1)}
+          >
+            <MdOutlineArrowBackIosNew color="white" />
+          </div>
+        )}
+      </div>
+      {currentPage < pages.length - 1 && (
+        <div
+          className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-xl cursor-pointer"
+          onClick={() => setPage(currentPage + 1)}
+        >
+          <MdOutlineArrowForwardIos color="white" />
+        </div>
+      )}
     </div>
   );
 };
@@ -64,7 +125,8 @@ export default function Carroceu() {
   }
 
   return (
-    <div className="z-0">
+    <div className="z-0 relative">
+      <DirectionsArrow currentPage={currentPage} setPage={setPage} />
       <CarouselFrame
         currentPage={currentPage}
         direction={direction}

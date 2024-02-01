@@ -1,5 +1,9 @@
-import { AnimatePresence, motion, wrap } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion, wrap } from "framer-motion";
 import { useRef } from "react";
+import {
+  MdOutlineArrowBackIosNew,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
 
 export const pages = [0, 1, 2, 3];
 
@@ -87,6 +91,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
       setPage(newPage, offset.x < 0 ? 1 : -1);
     }
   }
+
   return (
     <div className="relative h-[600px] w-full">
       <AnimatePresence
