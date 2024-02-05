@@ -5,9 +5,7 @@ import {
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
 
-export const pages = [0, 1, 2, 3];
-
-const images = [
+export const images = [
   {
     src: "../Slider/casal_com_bebe.jpg",
     title: "Plano de saúde individual",
@@ -64,7 +62,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
   setPage,
   direction,
 }) => {
-  /* Add and remove pages from the array to checkout
+  /* Add and remove images from the array to checkout
      how the gestures and pagination animations are
      fully data and layout-driven. */
   const hasPaginated = useRef(false);
@@ -87,7 +85,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
       hasPaginated.current = true;
       // Wrap the page index to within the
       // permitted page range
-      newPage = wrap(0, pages.length, newPage);
+      newPage = wrap(0, images.length, newPage);
       setPage(newPage, offset.x < 0 ? 1 : -1);
     }
   }

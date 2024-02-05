@@ -4,7 +4,7 @@ import SeguradoraOptions from "./components/Seguradoras";
 import Apresentacao from "./components/Apresentacao";
 import Caracteristicas from "./components/Caracteristicas";
 import Imagem from "./components/Imagem";
-import Carroceu from "./components/Carroceu_2";
+import Carroceu from "./components/Carroceu";
 
 function Home() {
   return (
