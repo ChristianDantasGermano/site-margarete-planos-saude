@@ -57,7 +57,7 @@ export default function TipoPlanos() {
               {index % 2 === 0 && (
                 <div className="max-h-full max-w-xl">
                   <AsyncImage
-                    className=" object-cover h-full w-[280px] rounded drop-shadow-lg"
+                    className="object-cover h-full w-[280px] rounded drop-shadow-lg"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
@@ -78,7 +78,7 @@ export default function TipoPlanos() {
               {index % 2 === 1 && (
                 <div className="max-h-full max-w-xl">
                   <AsyncImage
-                    className=" object-cover h-full w-[260px] rounded drop-shadow-lg"
+                    className="object-cover h-full w-[280px] rounded drop-shadow-lg"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
