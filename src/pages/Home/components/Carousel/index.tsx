@@ -19,7 +19,7 @@ const DirectionsArrow = ({
   // with a layoutId are removed/added
   return (
     <LayoutGroup id="b">
-      <div className="absolute top-1/2 w-full h-auto">
+      <div className="absolute mt-72 w-full h-auto">
         <div className="flex max-w-full h-auto">
           <div className="z-10 w-full h-auto">
             <DirectionController currentPage={currentPage} setPage={setPage} />
@@ -139,7 +139,7 @@ const backSlider = (currentPage: number, setPage: Function) => {
   }
 };
 
-export default function Carroceu() {
+export default function Carousel() {
   /* We keep track of the pagination direction as well as
    * current page, this way we can dynamically generate different
    * animations depending on the direction of travel */
@@ -163,7 +163,7 @@ export default function Carroceu() {
   }, [currentPage]);
 
   return (
-    <div className="z-0 relative">
+    <div className="-z-10">
       <DirectionsArrow currentPage={currentPage} setPage={setPage} />
       <CarouselFrame
         currentPage={currentPage}
