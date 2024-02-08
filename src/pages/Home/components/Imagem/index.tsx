@@ -1,10 +1,15 @@
+import { AsyncImage } from "loadable-image";
+import { Blur } from "transitions-kit";
+
 export default function Imagem() {
   return (
     <div className="bg-base-base drop-shadow-xl">
-      <img
-        className="object-cover max-h-[460px] w-full opacity-80 "
+      <AsyncImage
+        className="object-cover h-[460px] w-full opacity-80 "
         src="../../Home/mae_filho.jpg"
-      ></img>
+        Transition={(props) => <Blur radius={10} {...props} />}
+        loader={<div className="bg-base-tertiary" />}
+      />
     </div>
   );
 }

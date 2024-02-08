@@ -1,4 +1,5 @@
-import Perfil01 from "../../../../assets/photos/ma_perfil04.png";
+import { AsyncImage } from "loadable-image";
+import { Blur } from "transitions-kit";
 export default function Introducao() {
   return (
     <div className="flex gap-6 max-w-full">
@@ -12,9 +13,12 @@ export default function Introducao() {
           empresas.
         </h4>
       </div>
-      <div className="">
-        <img className="object-contain rounded-3xl" src={Perfil01} />
-      </div>
+      <AsyncImage
+        className="object-contain m-8 max-h-[840px] h-screen w-full rounded drop-shadow-lg"
+        src="../Blog/photos/ma_perfil04.png"
+        Transition={(props) => <Blur radius={10} {...props} />}
+        loader={<div className="bg-base-tertiary" />}
+      />
     </div>
   );
 }

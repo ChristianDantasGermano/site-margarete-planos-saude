@@ -32,7 +32,10 @@ export default function BeneficioPlanos() {
       </h1>
       <div className="flex flex-col px-6">
         {beneficiosPlanos.map((beneficio, index) => (
-          <div className="flex m-2 p-4 bg-base-primary rounded-3xl" key={index}>
+          <div
+            className="flex m-2 p-4 bg-base-primary rounded drop-shadow-lg"
+            key={index}
+          >
             <IconContext.Provider value={{ size: "150" }}>
               {beneficio.icon}
             </IconContext.Provider>
