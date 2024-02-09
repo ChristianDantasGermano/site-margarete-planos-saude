@@ -89,7 +89,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
   }
 
   return (
-    <div className="relative h-[600px] w-full">
+    <div className="relative h-[610px] w-full overflow-x-clip">
       <AnimatePresence
         // This will be used for components to resolve
         // exit variants. It's necessary as removed
