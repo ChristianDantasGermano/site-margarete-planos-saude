@@ -1,3 +1,4 @@
+import Fab from "./components/Fab";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Blog from "./pages/Blog";
@@ -13,6 +14,7 @@ export default function AppRouter() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
+        <Fab />
         <Footer />
       </Router>
     </main>
