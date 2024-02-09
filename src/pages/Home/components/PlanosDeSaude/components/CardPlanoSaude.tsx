@@ -2,6 +2,7 @@ import { useState } from "react";
 import { planoLogos } from "..";
 import { motion } from "framer-motion";
 import { Modal } from "../../Modal";
+import { redirectToWhatApp } from "../../../../../components/Fab";
 
 type CardPlanoSaude = {
   planos: (typeof planoLogos)[0];
@@ -67,6 +68,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
           </div>
           <motion.div
             className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center cursor-pointer"
+            onClick={redirectToWhatApp}
             whileHover={{
               scale: 1.05,
               transition: { duration: 0.2 },
