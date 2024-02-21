@@ -45,7 +45,7 @@ const Pagination = ({
     <LayoutGroup id="b">
       <div className="flex justify-center items-center ">
         <div className="z-10 bg-base-tertiary bg-opacity-60 flex justify-center items-center rounded-full shadow-lg">
-          {images.map((image, index) => (
+          {images.map((_image, index) => (
             <Indicator
               key={index}
               onClick={() => setPage(index)}

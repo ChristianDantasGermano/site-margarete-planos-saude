@@ -2,7 +2,7 @@ import Logo from "../../../../assets/images/logo.png";
 export default function Apresentacao() {
   return (
     <div className="flex flex-col justify-center bg-base-base items-center p-5 mt-12">
-      <div className="grid grid-cols-3 gap-6 w-8/12">
+      <div className="grid grid-cols-3 gap-6 w-8/12 ">
         <div className="col-span-2 flex flex-col">
           <h4 className="font-belleza font-semibold text-6xl">
             O satisfação de nossos clientes é o que nos motiva...
