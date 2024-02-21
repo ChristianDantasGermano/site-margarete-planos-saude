@@ -65,7 +65,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
      fully data and layout-driven. */
   const hasPaginated = useRef(false);
 
-  function detectPaginationGesture(e: Event, { offset }: { offset: any }) {
+  function detectPaginationGesture(_e: Event, { offset }: { offset: any }) {
     if (hasPaginated.current) return;
     let newPage = currentPage;
     const threshold = xOffset / 2;
