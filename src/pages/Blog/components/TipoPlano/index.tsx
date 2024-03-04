@@ -46,16 +46,16 @@ export default function TipoPlanos() {
   return (
     <>
       <div className="flex flex-col gap-6 max-w-full mt-16 ">
-        <h1 className="font-belleza text-6xl uppercase text-base-base">
+        <h1 className="font-belleza text-4xl text-base-base">
           Como escolher o tipo de plano certo?
         </h1>
       </div>
       <div className="flex gap-6">
-        <div className="flex flex-col p-12">
+        <div className="flex flex-col p-4">
           {tipoPlanos.map((beneficio, index) => (
-            <div className="flex gap-4 m-12 h-[420px] " key={index}>
+            <div className="flex gap-4 m-6 h-[420px] " key={index}>
               {index % 2 === 0 && (
-                <div className="max-h-full max-w-xl">
+                <div className="max-h-full max-w-md">
                   <AsyncImage
                     className="object-cover h-full w-[280px] rounded drop-shadow-lg"
                     src={beneficio.image}
@@ -65,13 +65,13 @@ export default function TipoPlanos() {
                 </div>
               )}
               <div className="flex flex-col flex-grow p-4">
-                <h1 className="font-belleza text-6xl font-semibold text-base-base pt-6">
+                <h1 className="font-belleza text-4xl font-semibold text-base-base pt-6">
                   {beneficio.titulo}
                 </h1>
-                <h4 className="font-belleza text-3xl text-base-base pl-4 w-11/12 text-justify">
+                <h4 className="font-belleza text-2xl text-base-base pl-4 w-11/12 text-justify">
                   {beneficio.descricao}
                 </h4>
-                <h6 className="font-belleza text-2xl italic text-base-base pl-12 pt-16 w-11/12 ">
+                <h6 className="font-belleza text-xl italic text-base-base pl-12 pt-16 w-11/12 ">
                   {beneficio.frase}
                 </h6>
               </div>

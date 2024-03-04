@@ -10,7 +10,7 @@ export default function Fab() {
     hover:drop-shadow-2xl hover:animate-bounce duration-200 active:opacity-90 active:shadow-inner"
       onClick={redirectToWhatApp}
     >
-      <RiWhatsappFill size={70} />
+      <RiWhatsappFill size={70}  color="#25D366" />
     </button>
   );
 }

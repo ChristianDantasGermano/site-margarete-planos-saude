@@ -7,7 +7,7 @@ export const images = [
   {
     src: "../Home/Slider/casal_com_bebe.jpg",
     title: "Plano de saúde individual",
-    subtitle: "Adoro todas as minhas versões que fizeram de mim quem sou hoje.",
+    subtitle: "Adoro todas as versões que fizeram de mim quem sou hoje.",
   },
   {
     src: "../Home/Slider/familia.jpg",
@@ -124,10 +124,10 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
           />
 
           <div className="absolute bottom-10 right-0 px-6 py-4 bg-base-secondary  w-1/2 opacity-80 drop-shadow-lg rounded-s">
-            <h2 className="mb-3 text-2xl font-belleza font-semibold tracking-tight text-black">
+            <h2 className="mb-3 text-xl font-belleza font-semibold tracking-tight text-black">
               {images[currentPage].title}
             </h2>
-            <p className="leading-normal font-belleza text-black text-xl">
+            <p className="leading-normal font-belleza text-black text-base">
               {images[currentPage].subtitle}
             </p>
           </div>

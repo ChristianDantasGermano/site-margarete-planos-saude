@@ -10,14 +10,6 @@ export const rotas = [
     label: "Blog",
     to: "/blog",
   },
-  {
-    label: "E-mail",
-    to: "#",
-  },
-  {
-    label: "Whatsapp",
-    to: "#",
-  },
 ];
 
 export default function Navbar() {
@@ -26,19 +18,19 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="z-50 bg-base-primary items-center flex w-full py-5 
-      lg:py-8 lg:justify-center drop-shadow-2xl"
+        className="z-50 relative bg-base-primary items-center flex w-full py-5 
+      lg:py-4 lg:justify-center drop-shadow-2xl opacity-80  backdrop-filter backdrop-blur-lg "
       >
-        <div className="flex-none pr-16">
-          <img className="pr-16 max-h-12 lg:max-h-16 lg:max-w-lg " src={Logo} />
+        <div className="flex-none">
+          <img className="pr-16 max-h-12" src={Logo} />
         </div>
-        <ul className="flex-none hidden lg:flex items-center gap-32 ">
+        <ul className="flex-none hidden lg:flex items-center gap-16 ">
           {rotas.map((rota, index) => (
             <Link key={index} to={rota.to}>
               <li
                 className="transition ease-in-out delay-50 
                               hover:scale-110 duration-100 font-belleza
-                               text-2xl uppercase active:text-neutral-600"
+                               text-xl uppercase active:text-neutral-600"
               >
                 {rota.label}
               </li>

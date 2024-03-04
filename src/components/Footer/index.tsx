@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="flex flex-col justify-start bg-base-primary  p-7">
       <div className="flex justify-center gap-96 pt-8 px-12">
         <div className="flex justify-center items-center">
-          <img src={Logo} />
+          <img className="max-h-16" src={Logo} />
         </div>
         <div className="flex flex-col justify-center items-center">
           <h4 className="font-belleza font-normal text-xl">

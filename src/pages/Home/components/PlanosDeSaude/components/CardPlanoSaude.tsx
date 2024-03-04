@@ -38,7 +38,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             />
           </div>
           <motion.div
-            className="flex justify-center items-center text-2xl text-base-base bg-base-tertiary z-0 rounded-b-md"
+            className="flex justify-center items-center text-xl text-base-base bg-base-tertiary z-0 rounded-b-md"
             animate={{ y: saberMais }}
             transition={{ duration: 0.5 }}
           >
@@ -55,13 +55,13 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             {planos.paragrafos?.map((value, index) => (
               <p
                 key={index}
-                className="indent-8 font-belleza text-left p-1 text-lg"
+                className="indent-8 font-belleza text-left p-1 text-base"
               >
                 {value}
               </p>
             ))}
             {planos.obs && (
-              <p className="font-belleza text-left font-semibold p-1 text-lg">
+              <p className="font-belleza text-left font-semibold p-1 text-base">
                 {planos.obs}
               </p>
             )}
@@ -75,7 +75,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             }}
             whileTap={{ scale: 1 }}
           >
-            <button className="font-belleza text-2xl hover: scale-105">
+            <button className="font-belleza text-xl hover: scale-105 text-white">
               Saber mais
             </button>
           </motion.div>

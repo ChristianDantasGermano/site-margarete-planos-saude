@@ -15,7 +15,7 @@ const SeguroIcon: React.FC<SeguroIconIT> = ({ seguro }) => {
           </IconContext.Provider>
         </div>
       </div>
-      <h5 className="font-belleza text-lg font-semibold text-center uppercase text-base-base break-words h-full">
+      <h5 className="font-belleza text-base font-semibold text-center uppercase text-base-base break-words h-full">
         {seguro.titulo}
       </h5>
     </div>
