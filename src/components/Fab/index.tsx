@@ -6,11 +6,11 @@ export const redirectToWhatApp = () => {
 export default function Fab() {
   return (
     <button
-      className="fixed bottom-10 right-8  z-50 rounded-full drop-shadow-lg flex justify-center items-center
+      className="hidden fixed bottom-10 right-8  z-50 rounded-full drop-shadow-lg flex justify-center items-center
     hover:drop-shadow-2xl hover:animate-bounce duration-200 active:opacity-90 active:shadow-inner"
       onClick={redirectToWhatApp}
     >
-      <RiWhatsappFill size={70}  color="#25D366" />
+      <RiWhatsappFill size={70} color="#25D366" />
     </button>
   );
 }
