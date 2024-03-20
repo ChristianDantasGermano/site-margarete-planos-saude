@@ -1,3 +1,7 @@
+type MenuToggle = {
+  isOpen: boolean;
+};
+
 const Path = (props: any) => (
   <path
     fill="transparent"
@@ -10,7 +14,7 @@ const Path = (props: any) => (
 
 export const MenuToggle = ({ toggle }: any) => (
   <button
-    className="absolute top-4 left-4 w-12 h-12 border-none bg-neutral-800 p-3 outline-none cursor-pointer rounded-full"
+    className="w-12 h-12 border-nonep-3 outline-none cursor-pointer rounded-full"
     onClick={toggle}
   >
     <svg

@@ -1,15 +1,20 @@
+import { useState } from "react";
 import Fab from "./components/Fab";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar_2";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
 
 export default function AppRouter() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <main>
+    <main className={isMobileMenuOpen ? "overflow-hidden" : ""}>
       <Router>
-        <Navbar />
+        <Navbar
+          navbarIsOpen={isMobileMenuOpen}
+          setNavbarOpen={setIsMobileMenuOpen}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
