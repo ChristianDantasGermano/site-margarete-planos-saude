@@ -17,7 +17,7 @@ type Menu = {
 
 const Menu: React.FC<Menu> = ({ onClickMenuItem }) => {
   return (
-    <nav className="z-40 absolute flex flex-col shadow-md bg-base-primary h-screen w-full">
+    <nav className="z-10 absolute flex flex-col shadow-md bg-base-primary w-full">
       <ul className="flex flex-col gap-3 p-4">
         {rotas.map((rota, index) => (
           <Link key={index} to={rota.to}>
