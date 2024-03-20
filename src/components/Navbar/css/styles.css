@@ -1,6 +1,6 @@
 body {
-  --white: #000000;
-  --background: var(--white);
+  --black: #000000;
+  --background: var(--black);
 }
 
 
