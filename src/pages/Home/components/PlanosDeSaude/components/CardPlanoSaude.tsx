@@ -30,6 +30,8 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
              rounded z-10 cursor-pointer"
             onMouseOver={() => setSaberMais(animateSaberMaisShow)}
             onMouseOut={() => setSaberMais(animateSaberMaisHide)}
+            onTouchStart={() => setSaberMais(animateSaberMaisShow)}
+            onTouchEnd={() => setSaberMais(animateSaberMaisHide)}
             onClick={() => setOpenModal(true)}
           >
             <img
@@ -55,25 +57,25 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             {planos.paragrafos?.map((value, index) => (
               <p
                 key={index}
-                className="indent-8 font-belleza text-left p-1 text-base"
+                className="indent-8 font-belleza text-left p-1 text-sm lg:text-base"
               >
                 {value}
               </p>
             ))}
             {planos.obs && (
-              <p className="font-belleza text-left font-semibold p-1 text-base">
+              <p className="font-belleza text-left font-semibold p-1 text-sm lg:text-base">
                 {planos.obs}
               </p>
             )}
           </div>
           <motion.div
-            className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center cursor-pointer"
-            onClick={redirectToWhatApp}
             whileHover={{
               scale: 1.05,
               transition: { duration: 0.2 },
             }}
-            whileTap={{ scale: 1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={redirectToWhatApp}
+            className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center cursor-pointer"
           >
             <button className="font-belleza text-xl hover: scale-105 text-white">
               Saber mais

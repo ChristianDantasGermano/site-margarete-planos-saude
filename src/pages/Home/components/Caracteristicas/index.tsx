@@ -1,74 +1,56 @@
+export const caracteristicas = [
+  {
+    titulo: "Contratação",
+    texto: "Cotação 100% online de acordo com seu perfil",
+  },
+  {
+    titulo: "Melhores preços",
+    texto: "Cotação Online",
+  },
+  {
+    titulo: "Relacionamento",
+    texto: "Personalizado e pessoal sempre visando atender suas necessidades",
+  },
+  {
+    titulo: "Soluções de acordo",
+    texto:
+      "Com sua necessidades através das melhores operadoras com o melhor custo benefício",
+  },
+  {
+    titulo: "Mais de 15 anos",
+    texto: "Mercado de Seguro e Planos de Saúde",
+  },
+  {
+    titulo: "Atendimento pessoal",
+    texto:
+      "Você fala com a gente de verdade através de whatsapp, telefone e email",
+  },
+];
+
 export default function Caracteristicas() {
   return (
     <div className="flex flex-col justify-center items-center p-8 bg-base-tertiary opacity-90">
-      <div className=" w-8/12">
+      <div className=" lg:w-8/12">
         <div className=" flex flex-col justify-center items-center">
-          <h4 className="font-belleza text-4xl text-base-base">
+          <h4 className="font-belleza text-3xl lg:text-4xl text-base-base">
             Por que escolher <b>Margarete planos de saúde?</b>
           </h4>
-          <p className="font-belleza text-base text-base-base mt-8">
+          <p className="font-belleza text-base text-left text-base-base mt-8">
             Entregamos os resultados que você busca com agilidade e
             descomplicação visando sua completa satisfação, pois, consideramos
             nossos clientes o nosso maior patrimônio.
           </p>
-          <div className="grid grid-cols-3 gap-6 mt-5 mx-16 ">
-            <div className="flex flex-col gap-6">
-              <div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 mt-5 mx-4 lg:mx-16 ">
+            {caracteristicas.map((value, index) => (
+              <div className="flex flex-col gap-2 lg:gap-6" key={index}>
                 <h6 className="text-base-base text-base font-semibold font-belleza">
-                  Contratação
+                  {value.titulo}
                 </h6>
-                <p className="pl-4 text-base-base font-belleza">
-                  Cotação 100% online de acordo com seu perfil
+                <p className="pl-2 lg:pl-4 text-base-base font-belleza">
+                  {value.texto}
                 </p>
               </div>
-              <div>
-                <h6 className="text-base-base text-base font-semibold font-belleza">
-                  Melhores preços
-                </h6>
-                <p className="pl-4 text-base-base font-belleza">
-                  Cotação Online
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <h6 className="text-base-base text-base font-semibold font-belleza">
-                  Relacionamento
-                </h6>
-                <p className="pl-4 text-base-base font-belleza">
-                  Personalizado e pessoal sempre visando atender suas
-                  necessidades
-                </p>
-              </div>
-              <div>
-                <h6 className="text-base-base text-base font-semibold font-belleza">
-                  Soluções de acordo
-                </h6>
-                <p className="pl-4 text-base-base font-belleza">
-                  Com sua necessidades através das melhores operadoras com o
-                  melhor custo benefício
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <h6 className="text-base-base text-base font-semibold font-belleza">
-                  Mais de 15 anos
-                </h6>
-                <p className="pl-4 text-base-base font-belleza">
-                  Mercado de Seguro e Planos de Saúde
-                </p>
-              </div>
-              <div>
-                <h6 className="text-base-base text-base font-semibold font-belleza">
-                  Atendimento pessoal
-                </h6>
-                <p className="pl-4 text-base-base font-belleza">
-                  Você fala com a gente de verdade através de whatsapp, telefone
-                  e email
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
