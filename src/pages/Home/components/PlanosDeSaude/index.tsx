@@ -146,7 +146,7 @@ export default function PlanoSaudeOptions() {
   */
 
   return (
-    <div className="flex flex-col justify-center items-center bg-base-base p-10">
+    <div className="flex flex-col justify-center items-center bg-base-base p-12">
       <div className="lg:w-8/12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-6 lg:mt-5 lg:mx-16">
           {planoLogos.map((plano, index) => (

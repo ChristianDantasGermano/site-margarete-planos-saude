@@ -8,14 +8,19 @@ type SeguroIconIT = {
 const SeguroIcon: React.FC<SeguroIconIT> = ({ seguro }) => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center bg-base-base rounded-full h-16 w-16 p-4">
-        <div>
+      <div className="flex flex-col justify-center items-center bg-base-base rounded-full lg:h-16 lg:w-16 p-2">
+        <div className="hidden">
           <IconContext.Provider value={{ size: "40" }}>
             {seguro.icon}
           </IconContext.Provider>
         </div>
+        <div className="lg:hidden">
+          <IconContext.Provider value={{ size: "25" }}>
+            {seguro.icon}
+          </IconContext.Provider>
+        </div>
       </div>
-      <h5 className="font-belleza text-base font-semibold text-center uppercase text-base-base break-words h-full">
+      <h5 className="font-belleza text-sm font-semibold text-center uppercase text-base-base break-words h-full">
         {seguro.titulo}
       </h5>
     </div>

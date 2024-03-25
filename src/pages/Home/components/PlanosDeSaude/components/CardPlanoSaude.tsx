@@ -26,7 +26,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
       >
         <div className="flex flex-col">
           <div
-            className="flex flex-col bg-white justify-center items-center shadow-lg p-4 h-32 2xl:h-44 w-full
+            className="flex flex-col bg-white justify-center items-center shadow-md p-4 h-32 xl:h-44 w-full
              rounded z-10 cursor-pointer"
             onMouseOver={() => setSaberMais(animateSaberMaisShow)}
             onMouseOut={() => setSaberMais(animateSaberMaisHide)}
@@ -52,18 +52,18 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
       </motion.div>
       <Modal isOpen={openModal} handleClose={() => setOpenModal(false)}>
         <div className="flex flex-col justify-center items-center">
-          <img className="object-contain max-h-28 max-w-xs" src={planos.src} />
+          <img className="object-contain max-h-12 max-w-xs" src={planos.src} />
           <div className="p-2 m-2">
             {planos.paragrafos?.map((value, index) => (
               <p
                 key={index}
-                className="indent-8 font-belleza text-left p-1 text-sm lg:text-base"
+                className="indent-8 font-belleza text-left p-1 text-sm "
               >
                 {value}
               </p>
             ))}
             {planos.obs && (
-              <p className="font-belleza text-left font-semibold p-1 text-sm lg:text-base">
+              <p className="font-belleza text-left font-semibold p-1 text-sm ">
                 {planos.obs}
               </p>
             )}
@@ -77,7 +77,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             onClick={redirectToWhatApp}
             className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center cursor-pointer"
           >
-            <button className="font-belleza text-xl hover: scale-105 text-white">
+            <button className="font-belleza text-base hover: scale-105 text-white">
               Saber mais
             </button>
           </motion.div>

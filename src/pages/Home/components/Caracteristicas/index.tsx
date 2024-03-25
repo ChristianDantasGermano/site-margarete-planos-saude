@@ -32,10 +32,10 @@ export default function Caracteristicas() {
     <div className="flex flex-col justify-center items-center p-8 bg-base-tertiary opacity-90">
       <div className=" lg:w-8/12">
         <div className=" flex flex-col justify-center items-center">
-          <h4 className="font-belleza text-3xl lg:text-4xl text-base-base">
+          <h4 className="font-belleza text-xl lg:text-4xl text-base-base">
             Por que escolher <b>Margarete planos de saúde?</b>
           </h4>
-          <p className="font-belleza text-base text-left text-base-base mt-8">
+          <p className="font-belleza text-sm text-left text-base-base mt-8">
             Entregamos os resultados que você busca com agilidade e
             descomplicação visando sua completa satisfação, pois, consideramos
             nossos clientes o nosso maior patrimônio.
@@ -46,7 +46,7 @@ export default function Caracteristicas() {
                 <h6 className="text-base-base text-base font-semibold font-belleza">
                   {value.titulo}
                 </h6>
-                <p className="pl-2 lg:pl-4 text-base-base font-belleza">
+                <p className="pl-2 lg:pl-4 text-sm text-base-base font-belleza">
                   {value.texto}
                 </p>
               </div>

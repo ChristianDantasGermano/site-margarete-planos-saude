@@ -3,7 +3,7 @@ import { Blur } from "transitions-kit";
 
 export default function Imagem() {
   return (
-    <div className="bg-base-base drop-shadow-xl">
+    <div className="bg-base-base drop-shadow-md">
       <AsyncImage
         className="object-cover h-[280px] lg:h-[460px] w-full opacity-80 "
         src="../../Home/mae_filho.jpg"

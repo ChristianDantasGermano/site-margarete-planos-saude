@@ -26,24 +26,33 @@ export const beneficiosPlanos = [
 
 export default function BeneficioPlanos() {
   return (
-    <div className="flex flex-col gap-6 max-w-full mt-16 ">
-      <h1 className="font-belleza text-4xl  text-base-base">
+    <div className="flex flex-col gap-6 max-w-full mt-4 lg:mt-16 ">
+      <h1 className="font-belleza font-bold text-2xl text-base-base">
         Por que escolher Margarete planos de saúde?
       </h1>
-      <div className="flex flex-col px-6">
+      <div className="flex flex-col px-3 lg:px-6">
         {beneficiosPlanos.map((beneficio, index) => (
           <div
-            className="flex m-2 p-4 bg-base-primary rounded drop-shadow-lg"
+            className="flex flex-col lg:flex-row m-2 p-4 bg-base-primary rounded drop-shadow-lg"
             key={index}
           >
-            <IconContext.Provider value={{ size: "80" }}>
-              {beneficio.icon}
-            </IconContext.Provider>
-            <div className="flex flex-col mx-4">
-              <h4 className="font-belleza text-2xl font-semibold">
+            <div className="lg:hidden p-1">
+              <IconContext.Provider value={{ size: "40" }}>
+                {beneficio.icon}
+              </IconContext.Provider>
+            </div>
+            <div className="hidden">
+              <IconContext.Provider value={{ size: "80" }}>
+                {beneficio.icon}
+              </IconContext.Provider>
+            </div>
+            <div className="flex flex-col lg:mx-4">
+              <h4 className="font-belleza text-xl lg:text-2xl font-bold">
                 {beneficio.titulo}
               </h4>
-              <p className="font-belleza text-xl mt-1">{beneficio.descricao}</p>
+              <p className="font-belleza text-base mt-1">
+                {beneficio.descricao}
+              </p>
             </div>
           </div>
         ))}

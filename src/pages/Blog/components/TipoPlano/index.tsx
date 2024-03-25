@@ -31,7 +31,7 @@ export const tipoPlanos = [
     titulo: "Plano Individuais e Familiares",
     descricao:
       "Um plano individual é a melhor opção para quem não tem dependentes e não possui convênio com planos de saúde na empresa em que trabalha. Enquanto os planos familiares ajudam a fornecer um atendimento de qualidade para conjuntos familiares.",
-    frase: "“Ser saudável é uma escolha, basta você querer.””",
+    frase: "“Ser saudável é uma escolha, basta você querer.”",
   },
   {
     image: "../Blog/planos/idosas.jpg",
@@ -45,46 +45,61 @@ export const tipoPlanos = [
 export default function TipoPlanos() {
   return (
     <>
-      <div className="flex flex-col gap-6 max-w-full mt-16 ">
-        <h1 className="font-belleza text-4xl text-base-base">
+      <div className="flex flex-col gap-3 lg:gap-6 max-w-full lg:mt-16 mt-4">
+        <h1 className="font-belleza font-bold text-2xl text-base-base">
           Como escolher o tipo de plano certo?
         </h1>
       </div>
-      <div className="flex gap-6">
-        <div className="flex flex-col p-4">
+      <div className="flex gap-3 lg:gap-6 mt-2 ">
+        <div className="flex flex-col lg:p-4">
           {tipoPlanos.map((beneficio, index) => (
-            <div className="flex gap-4 m-6 h-[420px] " key={index}>
-              {index % 2 === 0 && (
-                <div className="max-h-full max-w-md">
+            <div
+              className="flex gap-4 lg:m-6 lg:max-h-[420px] overflow-hidden"
+              key={index}
+            >
+              <div className="hidden lg:block">
+                {index % 2 === 0 && (
+                  <div className="max-h-full max-w-md">
+                    <AsyncImage
+                      className="object-cover h-full w-[280px] rounded drop-shadow-lg"
+                      src={beneficio.image}
+                      Transition={(props) => <Blur radius={10} {...props} />}
+                      loader={<div className="bg-base-tertiary" />}
+                    />
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-col flex-grow p-4">
+                <div className="lg:hidden flex h-full w-full justify-center items-center ">
                   <AsyncImage
-                    className="object-cover h-full w-[280px] rounded drop-shadow-lg"
+                    className="object-contain h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-sm"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
                   />
                 </div>
-              )}
-              <div className="flex flex-col flex-grow p-4">
-                <h1 className="font-belleza text-4xl font-semibold text-base-base pt-6">
+                <h1 className="font-belleza text-xl lg:text-4xl font-semibold text-base-base mt-2">
                   {beneficio.titulo}
                 </h1>
-                <h4 className="font-belleza text-2xl text-base-base pl-4 w-11/12 text-justify">
+                <h4 className="font-belleza text-base lg:text-2xl text-base-base pl-4 lg:w-11/12 text-left">
                   {beneficio.descricao}
                 </h4>
-                <h6 className="font-belleza text-xl italic text-base-base pl-12 pt-16 w-11/12 ">
+                <h6 className="hidden lg:block font-belleza text-sm lg:text-xl italic text-base-base pl-12 pt-16 w-11/12 ">
                   {beneficio.frase}
                 </h6>
               </div>
-              {index % 2 === 1 && (
-                <div className="max-h-full max-w-xl">
-                  <AsyncImage
-                    className="object-cover h-full w-[280px] rounded drop-shadow-lg"
-                    src={beneficio.image}
-                    Transition={(props) => <Blur radius={10} {...props} />}
-                    loader={<div className="bg-base-tertiary" />}
-                  />
-                </div>
-              )}
+              <div className="hidden lg:block">
+                {index % 2 === 1 && (
+                  <div className="max-h-full max-w-xl">
+                    <AsyncImage
+                      className="object-cover h-full w-[280px] rounded drop-shadow-lg"
+                      src={beneficio.image}
+                      Transition={(props) => <Blur radius={10} {...props} />}
+                      loader={<div className="bg-base-tertiary" />}
+                    />
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>

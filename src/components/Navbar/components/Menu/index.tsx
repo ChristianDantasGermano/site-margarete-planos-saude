@@ -24,7 +24,7 @@ const Menu: React.FC<Menu> = ({ onClickMenuItem }) => {
             <li
               key={index}
               onClick={onClickMenuItem}
-              className="block  p-4 w-11/12 font-belleza font-normal text-2xl uppercase"
+              className="block  p-2 w-11/12 font-belleza font-normal text-xl uppercase"
             >
               {rota.label}
             </li>
