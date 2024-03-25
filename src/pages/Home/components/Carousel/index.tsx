@@ -44,7 +44,7 @@ const Pagination = ({
   return (
     <LayoutGroup id="b">
       <div className="flex justify-center items-center ">
-        <div className="z-10 bg-base-tertiary bg-opacity-60 flex justify-center items-center rounded-full shadow-lg">
+        <div className="z-10 bg-base-tertiary bg-opacity-60 flex justify-center items-center rounded-full shadow-md">
           {images.map((_image, index) => (
             <Indicator
               key={index}
@@ -66,7 +66,7 @@ const Indicator = ({
   onClick: MouseEventHandler;
 }) => {
   return (
-    <div className="p-4 cursor-pointer" onClick={onClick}>
+    <div className="p-3 cursor-pointer" onClick={onClick}>
       <div className="relative w-2 h-2 bg-base-base  rounded-full ">
         {isSelected && (
           // By setting layoutId, when this component
@@ -93,7 +93,7 @@ const DirectionController = ({
     <div className="hidden lg:flex w-full h-auto p-4">
       <div className="flex-1 justify-center items-center">
         <motion.div
-          className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-xl cursor-pointer"
+          className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-md cursor-pointer"
           onClick={() => backSlider(currentPage, setPage)}
           initial={{ opacity: 0.6 }}
           whileHover={{
@@ -107,7 +107,7 @@ const DirectionController = ({
         </motion.div>
       </div>
       <motion.div
-        className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-xl cursor-pointer"
+        className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-md cursor-pointer"
         onClick={() => forwardSlider(currentPage, setPage)}
         initial={{ opacity: 0.6 }}
         whileHover={{

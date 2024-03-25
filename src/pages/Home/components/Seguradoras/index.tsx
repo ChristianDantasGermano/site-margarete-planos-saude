@@ -15,51 +15,51 @@ import SeguroIcon from "./components/SeguroIcon";
 export const segurosList = [
   {
     icon: <FaMotorcycle />,
-    titulo: "moto",
+    titulo: "Moto",
   },
   {
     icon: <MdDirectionsBike />,
-    titulo: "bicicleta",
+    titulo: "Bicicleta",
   },
   {
     icon: <FaTruck />,
-    titulo: "frota",
+    titulo: "Frota",
   },
   {
     icon: <GiReceiveMoney />,
-    titulo: "financiamento",
+    titulo: "Financiamento",
   },
   {
     icon: <FaPeopleGroup />,
-    titulo: "consórcio",
+    titulo: "Consórcio",
   },
   {
     icon: <FaTooth />,
-    titulo: "odontológico",
+    titulo: "Odontológico",
   },
   {
     icon: <TbPigMoney />,
-    titulo: "previdência privada",
+    titulo: "Previdência privada",
   },
   {
     icon: <AiOutlineLaptop />,
-    titulo: "portáveis",
+    titulo: "Portáveis",
   },
   {
     icon: <FaMoneyBillTransfer />,
-    titulo: "fiança",
+    titulo: "Fiança",
   },
   {
     icon: <HiOutlineBuildingOffice2 />,
-    titulo: "condomínio",
+    titulo: "Condomínio",
   },
   {
     icon: <MdForklift />,
-    titulo: "equipamentos",
+    titulo: "Equipamentos",
   },
   {
     icon: <GiPayMoney />,
-    titulo: "capital de giro",
+    titulo: "Capital de giro",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function SeguradoraOptions() {
             Trabalhamos com todos os tipos de seguros, confira outras formas
             <b> que também podemos ajudar:</b>
           </h4>
-          <div className="grid grid-cols-2 lg:grid-cols-6 grid-rows-2 gap-4 p-8">
+          <div className="grid grid-cols-3 lg:grid-cols-6 grid-rows-2 gap-4 p-2 lg:p-8">
             {segurosList.map((seguro, index) => (
               <SeguroIcon key={index} seguro={seguro} />
             ))}
