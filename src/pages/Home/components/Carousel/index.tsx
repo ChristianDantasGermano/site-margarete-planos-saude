@@ -19,7 +19,7 @@ const DirectionsArrow = ({
   // with a layoutId are removed/added
   return (
     <LayoutGroup id="b">
-      <div className="absolute mt-72 w-full h-auto">
+      <div className="absolute mt-64 w-full h-auto">
         <div className="flex max-w-full h-auto">
           <div className="z-10 w-full h-auto">
             <DirectionController currentPage={currentPage} setPage={setPage} />
@@ -93,7 +93,7 @@ const DirectionController = ({
     <div className="hidden lg:flex w-full h-auto p-4">
       <div className="flex-1 justify-center items-center">
         <motion.div
-          className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-md cursor-pointer"
+          className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-8 h-8 rounded-full shadow-md cursor-pointer"
           onClick={() => backSlider(currentPage, setPage)}
           initial={{ opacity: 0.6 }}
           whileHover={{
@@ -107,7 +107,7 @@ const DirectionController = ({
         </motion.div>
       </div>
       <motion.div
-        className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-10 h-10 rounded-full shadow-md cursor-pointer"
+        className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-8 h-8 rounded-full shadow-md cursor-pointer"
         onClick={() => forwardSlider(currentPage, setPage)}
         initial={{ opacity: 0.6 }}
         whileHover={{
