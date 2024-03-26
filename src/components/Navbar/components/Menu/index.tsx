@@ -1,3 +1,4 @@
+import { MotionConfig, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export const rotas = [
@@ -15,7 +16,7 @@ type Menu = {
   onClickMenuItem: VoidFunction;
 };
 
-const Menu: React.FC<Menu> = ({ onClickMenuItem }) => {
+const MenuMobile: React.FC<Menu> = ({ onClickMenuItem }) => {
   return (
     <nav className="z-10 absolute flex flex-col shadow-md bg-base-primary w-full">
       <ul className="flex flex-col gap-3 p-4">
@@ -35,4 +36,26 @@ const Menu: React.FC<Menu> = ({ onClickMenuItem }) => {
   );
 };
 
-export default Menu;
+const MenuDekstop = () => {
+  return (
+    <ul className="flex gap-12">
+      {rotas.map((rota, index) => (
+        <Link key={index} to={rota.to}>
+          <motion.div
+            key={index}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.1 },
+            }}
+            whileTap={{ scale: 0.9 }}
+            className="p-2 font-belleza font-normal text-lg uppercase"
+          >
+            {rota.label}
+          </motion.div>
+        </Link>
+      ))}
+    </ul>
+  );
+};
+
+export { MenuMobile, MenuDekstop };

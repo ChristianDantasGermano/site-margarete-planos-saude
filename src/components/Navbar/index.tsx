@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Logo from "../../assets/images/logo.png";
 import { stagger, useAnimate } from "framer-motion";
 import { MenuToggle } from "./components/MenuToogle";
-import Menu from "./components/Menu";
+import Menu, { MenuDekstop, MenuMobile } from "./components/Menu";
 
 function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
@@ -61,12 +61,19 @@ export const Navbar: React.FC<Navbar> = ({ navbarIsOpen, setNavbarOpen }) => {
   return (
     <div ref={scope}>
       <div className="z-50 relative flex w-full p-2 bg-base-primary overflow-hidden drop-shadow-md">
-        <div className="flex flex-grow place-items-center pl-4">
-          <img className=" max-h-8" src={Logo} />
+        <div className="flex flex-grow justify-center text-center">
+          <div className="flex flex-grow lg:flex-none place-items-center pl-4 lg:mx-12">
+            <img className="max-h-8 lg:max-h-10" src={Logo} />
+          </div>
+          <div className="hidden lg:block">
+            <MenuDekstop />
+          </div>
         </div>
-        <MenuToggle toggle={() => setNavbarOpen(!navbarIsOpen)} />
+        <div className="lg:hidden">
+          <MenuToggle toggle={() => setNavbarOpen(!navbarIsOpen)} />
+        </div>
       </div>
-      <Menu onClickMenuItem={() => setNavbarOpen(false)} />
+      <MenuMobile onClickMenuItem={() => setNavbarOpen(false)} />
     </div>
   );
 };
