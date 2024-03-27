@@ -32,17 +32,17 @@ export default function Caracteristicas() {
     <div className="flex flex-col justify-center items-center p-8 bg-base-tertiary opacity-90">
       <div className=" lg:w-8/12">
         <div className=" flex flex-col justify-center items-center">
-          <h4 className="font-belleza text-xl lg:text-4xl text-base-base">
+          <h4 className="font-belleza text-xl lg:text-2xl text-base-base">
             Por que escolher <b>Margarete planos de saúde?</b>
           </h4>
-          <p className="font-belleza text-sm text-left text-base-base mt-8">
+          <p className="font-belleza text-sm text-left text-base-base mt-4">
             Entregamos os resultados que você busca com agilidade e
             descomplicação visando sua completa satisfação, pois, consideramos
             nossos clientes o nosso maior patrimônio.
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 mt-5 mx-4 lg:mx-16 ">
             {caracteristicas.map((value, index) => (
-              <div className="flex flex-col gap-2 lg:gap-6" key={index}>
+              <div className="flex flex-col" key={index}>
                 <h6 className="text-base-base text-base font-semibold font-belleza">
                   {value.titulo}
                 </h6>

@@ -60,7 +60,7 @@ export const Navbar: React.FC<Navbar> = ({ navbarIsOpen, setNavbarOpen }) => {
   const scope = useMenuAnimation(navbarIsOpen);
   return (
     <div ref={scope}>
-      <div className="z-50 relative flex w-full p-2 bg-base-primary overflow-hidden drop-shadow-md">
+      <div className="z-50 relative flex w-full p-2 bg-base-primary overflow-hidden drop-shadow-sm">
         <div className="flex flex-grow justify-center text-center">
           <div className="flex flex-grow lg:flex-none place-items-center pl-4 lg:mx-12">
             <img className="max-h-8 lg:max-h-10" src={Logo} />

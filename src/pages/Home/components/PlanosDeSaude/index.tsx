@@ -117,43 +117,21 @@ export const planoLogos = [
 ];
 
 export default function PlanoSaudeOptions() {
-  /* REMOVER
-  const planosList = (): ReactNode | null => {
-    let tempPlanoList = [...planoLogos];
-    let col01 = tempPlanoList.splice(0, 4);
-    let col02 = tempPlanoList.splice(0, 5);
-    let col03 = tempPlanoList.splice(0, 4);
-    return (
-      <div className="grid grid-cols-3 gap-6 mt-5 mx-16 ">
-        {colList(col01)}
-        {colList(col02)}
-        {colList(col03)}
-      </div>
-    );
-  };
-
-  const colList = (planos: typeof planoLogos): ReactNode | null => {
-    return (
-      <div className="flex flex-col gap-6 ">
-        {planos.map((plano, index) => (
-          <div key={index} className="flex flex-col">
-            <CardPlanoSaude planos={plano} />
-          </div>
-        ))}
-      </div>
-    );
-  };
-  */
-
   return (
     <div className="flex flex-col justify-center items-center bg-base-base p-4 px-16">
       <div className="lg:w-8/12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-6 lg:mt-5 lg:mx-16">
-          {planoLogos.map((plano, index) => (
-            <div key={index} className="flex flex-col">
-              <CardPlanoSaude planos={plano} />
-            </div>
-          ))}
+          {planoLogos.map((plano, index) =>
+            index !== 12 ? (
+              <div key={index} className="flex flex-col">
+                <CardPlanoSaude planos={plano} />
+              </div>
+            ) : (
+              <div key={index} className="flex flex-col lg:col-start-2">
+                <CardPlanoSaude planos={plano} />
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ export default function Imagem() {
   return (
     <div className="bg-base-base drop-shadow-md">
       <AsyncImage
-        className="object-cover h-[280px] lg:h-[460px] w-full opacity-80 "
+        className="object-cover h-[280px] lg:h-[360px] w-full opacity-80 "
         src="../../Home/mae_filho.jpg"
         Transition={(props) => <Blur radius={10} {...props} />}
         loader={<div className="bg-base-tertiary" />}
