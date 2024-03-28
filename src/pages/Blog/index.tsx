@@ -4,7 +4,7 @@ import TipoPlanos from "./components/TipoPlano";
 
 function Blog() {
   return (
-    <div className="z-0 bg-base-tertiary flex-grow p-4 lg:p-12 lg;px-48">
+    <div className="z-0 bg-base-tertiary flex-grow p-4 lg:px-44">
       <div className="flex flex-col ">
         <Introducao />
         <BeneficioPlanos />

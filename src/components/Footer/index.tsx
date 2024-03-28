@@ -9,7 +9,7 @@ export default function Footer() {
           <img className="max-h-12 lg:max-h-16" src={Logo} />
         </div>
         <div className="flex  flex-col justify-center items-center">
-          <h4 className="font-belleza font-normal text-sm lg:text-xl">
+          <h4 className="font-belleza font-normal text-sm lg:text-lg">
             Tem dúvidas? Tire todas suas dúvidas pelo WhatsApp
           </h4>
           <div
@@ -19,10 +19,10 @@ export default function Footer() {
             <RiWhatsappFill size={40} />
           </div>
           <div
-            className="hidden p-2 cursor-pointer hover:opacity-95 active:opacity-90"
+            className="hidden lg:block p-2 cursor-pointer hover:opacity-95 active:opacity-90"
             onClick={redirectToWhatApp}
           >
-            <RiWhatsappFill size={60} />
+            <RiWhatsappFill size={45} />
           </div>
         </div>
       </div>

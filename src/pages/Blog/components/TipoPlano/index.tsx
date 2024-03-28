@@ -53,23 +53,18 @@ export default function TipoPlanos() {
       <div className="flex gap-3 lg:gap-6 mt-2 ">
         <div className="flex flex-col lg:p-4">
           {tipoPlanos.map((beneficio, index) => (
-            <div
-              className="flex gap-4 lg:m-6 lg:max-h-[420px] overflow-hidden"
-              key={index}
-            >
-              <div className="hidden lg:block">
+            <div className="flex gap-4 lg:m-6 overflow-hidden" key={index}>
+              <div className="hidden lg:flex flex-grow-0 h-full w-full bg-black">
                 {index % 2 === 0 && (
-                  <div className="max-h-full max-w-md">
-                    <AsyncImage
-                      className="object-cover h-full w-[280px] rounded drop-shadow-lg"
-                      src={beneficio.image}
-                      Transition={(props) => <Blur radius={10} {...props} />}
-                      loader={<div className="bg-base-tertiary" />}
-                    />
-                  </div>
+                  <AsyncImage
+                    className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg"
+                    src={beneficio.image}
+                    Transition={(props) => <Blur radius={10} {...props} />}
+                    loader={<div className="bg-base-tertiary" />}
+                  />
                 )}
               </div>
-              <div className="flex flex-col flex-grow p-4">
+              <div className="flex flex-col flex-grow p-4 w-full bg-black">
                 <div className="lg:hidden flex h-full w-full justify-center items-center ">
                   <AsyncImage
                     className="object-contain h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-sm"
@@ -88,16 +83,14 @@ export default function TipoPlanos() {
                   {beneficio.frase}
                 </h6>
               </div>
-              <div className="hidden lg:block">
+              <div className="hidden lg:flex flex-grow-0 w-full h-full bg-black">
                 {index % 2 === 1 && (
-                  <div className="max-h-full max-w-xl">
-                    <AsyncImage
-                      className="object-cover h-full w-[280px] rounded drop-shadow-lg"
-                      src={beneficio.image}
-                      Transition={(props) => <Blur radius={10} {...props} />}
-                      loader={<div className="bg-base-tertiary" />}
-                    />
-                  </div>
+                  <AsyncImage
+                    className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg"
+                    src={beneficio.image}
+                    Transition={(props) => <Blur radius={10} {...props} />}
+                    loader={<div className="bg-base-tertiary" />}
+                  />
                 )}
               </div>
             </div>
