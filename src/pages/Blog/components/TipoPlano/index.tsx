@@ -54,17 +54,17 @@ export default function TipoPlanos() {
         <div className="flex flex-col lg:p-4">
           {tipoPlanos.map((beneficio, index) => (
             <div className="flex gap-4 lg:m-6 overflow-hidden" key={index}>
-              <div className="hidden lg:flex flex-grow-0 h-full w-full bg-black">
-                {index % 2 === 0 && (
+              {index % 2 === 0 && (
+                <div className="hidden lg:flex h-full w-full max-h-[320px] max-w-[220px] ">
                   <AsyncImage
                     className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
                   />
-                )}
-              </div>
-              <div className="flex flex-col flex-grow p-4 w-full bg-black">
+                </div>
+              )}
+              <div className="flex flex-col grow p-4 ">
                 <div className="lg:hidden flex h-full w-full justify-center items-center ">
                   <AsyncImage
                     className="object-contain h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-sm"
@@ -73,26 +73,26 @@ export default function TipoPlanos() {
                     loader={<div className="bg-base-tertiary" />}
                   />
                 </div>
-                <h1 className="font-belleza text-xl lg:text-4xl font-semibold text-base-base mt-2">
+                <h1 className="font-belleza text-xl lg:text-2xl font-semibold text-base-base mt-2">
                   {beneficio.titulo}
                 </h1>
-                <h4 className="font-belleza text-base lg:text-2xl text-base-base pl-4 lg:w-11/12 text-left">
+                <h4 className="font-belleza text-base lg:text-base text-base-base pl-4 lg:w-11/12 text-left">
                   {beneficio.descricao}
                 </h4>
-                <h6 className="hidden lg:block font-belleza text-sm lg:text-xl italic text-base-base pl-12 pt-16 w-11/12 ">
+                <h6 className="hidden lg:block font-belleza text-sm lg:text-sm italic text-base-base pl-12 pt-16 w-11/12 ">
                   {beneficio.frase}
                 </h6>
               </div>
-              <div className="hidden lg:flex flex-grow-0 w-full h-full bg-black">
-                {index % 2 === 1 && (
+              {index % 2 === 1 && (
+                <div className="hidden lg:flex grow-0 w-full h-full max-h-[320px] max-w-[220px] ">
                   <AsyncImage
                     className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
                   />
-                )}
-              </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

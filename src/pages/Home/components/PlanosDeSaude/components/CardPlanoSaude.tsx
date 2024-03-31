@@ -52,7 +52,10 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
       </motion.div>
       <Modal isOpen={openModal} handleClose={() => setOpenModal(false)}>
         <div className="flex flex-col justify-center items-center">
-          <img className="object-contain max-h-12 max-w-xs" src={planos.src} />
+          <img
+            className="object-contain max-h-12  lg:max-h-20 max-w-xs"
+            src={planos.src}
+          />
           <div className="p-2 m-2">
             {planos.paragrafos?.map((value, index) => (
               <p

@@ -15,7 +15,7 @@ export default function Introducao() {
       </div>
       <div className=" overflow-auto w-full h-full flex justify-center items-center my-4 lg:my-0">
         <AsyncImage
-          className="object-top lg:max-h-[740px] max-h-[360px] max-w-xs lg:max-w-2xl h-screen w-full rounded drop-shadow-lg"
+          className="object-top lg:max-h-[680px] max-h-[360px] max-w-xs lg:max-w-xl h-screen w-full rounded drop-shadow-lg"
           src="../Blog/photos/ma_perfil04.png"
           Transition={(props) => <Blur radius={10} {...props} />}
           loader={<div className="bg-base-tertiary" />}
