@@ -1,4 +1,4 @@
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export const rotas = [
@@ -18,7 +18,7 @@ type Menu = {
 
 const MenuMobile: React.FC<Menu> = ({ onClickMenuItem }) => {
   return (
-    <nav className="z-10 absolute flex flex-col shadow-md bg-base-primary w-full">
+    <nav className="z-10 absolute flex flex-col shadow-md bg-base-primary w-full md:hidden">
       <ul className="flex flex-col gap-3 p-4">
         {rotas.map((rota, index) => (
           <Link key={index} to={rota.to}>

@@ -26,7 +26,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
       >
         <div className="flex flex-col">
           <div
-            className="flex flex-col bg-white justify-center items-center shadow-md p-4 h-32 lg:h-32 w-full
+            className="flex flex-col bg-white justify-center items-center shadow-md p-4 h-32 md:h-32 w-full
              rounded z-10 cursor-pointer"
             onMouseOver={() => setSaberMais(animateSaberMaisShow)}
             onMouseOut={() => setSaberMais(animateSaberMaisHide)}
@@ -53,7 +53,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
       <Modal isOpen={openModal} handleClose={() => setOpenModal(false)}>
         <div className="flex flex-col justify-center items-center">
           <img
-            className="object-contain max-h-12  lg:max-h-20 max-w-xs"
+            className="object-contain max-h-12  md:max-h-20 max-w-xs"
             src={planos.src}
           />
           <div className="p-2 m-2">

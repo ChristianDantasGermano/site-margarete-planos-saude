@@ -90,7 +90,7 @@ const DirectionController = ({
   setPage: Function;
 }) => {
   return (
-    <div className="hidden lg:flex w-full h-auto p-4">
+    <div className="hidden md:flex w-full h-auto p-4">
       <div className="flex-1 justify-center items-center">
         <motion.div
           className="flex justify-center items-center bg-base-tertiary bg-opacity-60 w-8 h-8 rounded-full shadow-md cursor-pointer"

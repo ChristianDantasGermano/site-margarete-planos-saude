@@ -89,7 +89,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
   }
 
   return (
-    <div className="relative h-[230px] lg:h-[520px] w-full overflow-x-clip">
+    <div className="relative h-[230px] md:h-[520px] w-full overflow-x-clip">
       <AnimatePresence
         // This will be used for components to resolve
         // exit variants. It's necessary as removed
@@ -117,13 +117,13 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
           custom={direction}
         >
           <AsyncImage
-            className="object-cover h-[280px] w-full lg:h-[560px] lg:w-full"
+            className="object-cover h-[280px] w-full md:h-[560px] md:w-full"
             src={images[currentPage].src}
             Transition={(props) => <Blur radius={10} {...props} />}
             loader={<div className="bg-base-tertiary" />}
           />
 
-          <div className="hidden lg:flex lg:flex-col absolute bottom-10 right-0 px-6 py-4 bg-base-secondary  w-1/2 opacity-80 drop-shadow-lg rounded-s">
+          <div className="hidden md:flex md:flex-col absolute bottom-10 right-0 px-6 py-4 bg-base-secondary  w-1/2 opacity-80 drop-shadow-lg rounded-s">
             <h2 className="mb-3 text-base  font-belleza font-semibold tracking-tight text-black">
               {images[currentPage].title}
             </h2>

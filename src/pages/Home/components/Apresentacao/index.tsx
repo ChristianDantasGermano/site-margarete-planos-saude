@@ -1,10 +1,10 @@
 import Logo from "../../../../assets/images/logo.png";
 export default function Apresentacao() {
   return (
-    <div className="flex flex-col justify-center bg-base-base items-center p-6 mt-4 lg:mt-4">
-      <div className="lg:grid lg:grid-cols-3 gap-6 lg:w-8/12 ">
-        <div className="lg:col-span-2 flex flex-col">
-          <h4 className="font-belleza font-bold text-xl lg:text-2xl lg:p-2 ">
+    <div className="flex flex-col justify-center bg-base-base items-center p-6 mt-4 md:mt-4">
+      <div className="md:grid md:grid-cols-3 gap-6 QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12 ">
+        <div className="md:col-span-2 flex flex-col">
+          <h4 className="font-belleza font-bold text-xl md:text-2xl md:p-2 ">
             O satisfação de nossos clientes é o que nos motiva...
           </h4>
           <p className="font-belleza text-sm  mt-4 indent-8">
@@ -22,8 +22,8 @@ export default function Apresentacao() {
             seja para pessoa física ou pessoa jurídica.
           </p>
         </div>
-        <div className="p-6  lg:col-span-1 flex justify-center items-center">
-          <img className="max-h-12 lg:max-h-14" src={Logo} />
+        <div className="p-6  md:col-span-1 flex justify-center items-center">
+          <img className="max-h-12 md:max-h-14" src={Logo} />
         </div>
       </div>
     </div>

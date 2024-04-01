@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import CardPlanoSaude from "./components/CardPlanoSaude";
 
 export const planoLogos = [
@@ -119,15 +118,15 @@ export const planoLogos = [
 export default function PlanoSaudeOptions() {
   return (
     <div className="flex flex-col justify-center items-center bg-base-base p-4 px-16">
-      <div className="lg:w-8/12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-6 lg:mt-5 lg:mx-16">
+      <div className="QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 md:mt-5 md:mx-16">
           {planoLogos.map((plano, index) =>
             index !== 12 ? (
               <div key={index} className="flex flex-col">
                 <CardPlanoSaude planos={plano} />
               </div>
             ) : (
-              <div key={index} className="flex flex-col lg:col-start-2">
+              <div key={index} className="flex flex-col md:col-start-2">
                 <CardPlanoSaude planos={plano} />
               </div>
             )

@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}" , 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
+      screens: {
+        QHD: "2560px",
+        QHDPLUS: "3200px",
+      },
       fontFamily: {
         belleza: ["Belleza"],
       },
@@ -16,4 +24,4 @@ export default {
       },
     },
   },
-}
+};

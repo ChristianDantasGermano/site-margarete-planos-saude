@@ -65,14 +65,14 @@ export const segurosList = [
 
 export default function SeguradoraOptions() {
   return (
-    <div className="flex flex-col justify-center items-center bg-base-tertiary p-6 lg:p-10">
-      <div className="lg:w-8/12">
+    <div className="flex flex-col justify-center items-center bg-base-tertiary p-6 md:p-10">
+      <div className="md:w-8/12">
         <div className=" flex flex-col justify-center items-center">
-          <h4 className="font-belleza text-xl lg:text-2xl text-base-base">
+          <h4 className="font-belleza text-xl md:text-2xl text-base-base">
             Trabalhamos com todos os tipos de seguros, confira outras formas
             <b> que também podemos ajudar:</b>
           </h4>
-          <div className="grid grid-cols-3 lg:grid-cols-6 grid-rows-2 gap-4 p-2 lg:p-8">
+          <div className="grid grid-cols-3 md:grid-cols-6 grid-rows-2 gap-4 p-2 md:p-8">
             {segurosList.map((seguro, index) => (
               <SeguroIcon key={index} seguro={seguro} />
             ))}

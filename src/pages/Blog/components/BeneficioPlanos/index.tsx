@@ -30,23 +30,23 @@ export default function BeneficioPlanos() {
       <h1 className="font-belleza font-bold text-2xl text-base-base">
         Por que escolher Margarete planos de saúde?
       </h1>
-      <div className="flex flex-col px-3 lg:px-6">
+      <div className="flex flex-col px-3 md:px-6">
         {beneficiosPlanos.map((beneficio, index) => (
           <div
-            className="flex flex-col lg:flex-row m-2 p-4 bg-base-primary rounded drop-shadow-lg"
+            className="flex flex-col md:flex-row m-2 p-4 bg-base-primary rounded drop-shadow-lg"
             key={index}
           >
-            <div className="lg:hidden p-1">
+            <div className="md:hidden p-1">
               <IconContext.Provider value={{ size: "40" }}>
                 {beneficio.icon}
               </IconContext.Provider>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden md:block">
               <IconContext.Provider value={{ size: "80" }}>
                 {beneficio.icon}
               </IconContext.Provider>
             </div>
-            <div className="flex flex-col lg:mx-4">
+            <div className="flex flex-col md:mx-4">
               <h4 className="font-belleza text-xl font-bold">
                 {beneficio.titulo}
               </h4>
