@@ -5,6 +5,7 @@ import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
+import NotFound from "./pages/NotFound";
 
 export default function AppRouter() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function AppRouter() {
           setNavbarOpen={setIsMobileMenuOpen}
         />
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
