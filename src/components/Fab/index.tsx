@@ -1,5 +1,5 @@
 import { RiWhatsappFill } from "react-icons/ri";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 export const redirectToWhatApp = () => {
   window.open("https://wa.me/5513991519057");
 };
@@ -16,7 +16,7 @@ export default function Fab() {
       whileTap={{ scale: 0.9 }}
     >
       <div className="hidden md:block">
-        <RiWhatsappFill size={65} color="#25D366" />
+        <RiWhatsappFill size={75} color="#25D366" />
       </div>
       <div className="md:hidden">
         <RiWhatsappFill size={50} color="#25D366" />

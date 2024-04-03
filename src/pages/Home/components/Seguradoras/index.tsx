@@ -68,11 +68,11 @@ export default function SeguradoraOptions() {
     <div className="flex flex-col justify-center items-center bg-base-tertiary p-6 md:p-10">
       <div className="md:w-8/12">
         <div className=" flex flex-col justify-center items-center">
-          <h4 className="font-belleza text-xl md:text-2xl text-base-base">
+          <h4 className="font-glacialIndifference text-xl md:text-2xl text-gray-700">
             Trabalhamos com todos os tipos de seguros, confira outras formas
             <b> que também podemos ajudar:</b>
           </h4>
-          <div className="grid grid-cols-3 md:grid-cols-6 grid-rows-2 gap-4 p-2 md:p-8">
+          <div className="grid grid-cols-3 md:grid-cols-6 grid-rows-2 gap-6 p-2 mt-4 md:p-8 ">
             {segurosList.map((seguro, index) => (
               <SeguroIcon key={index} seguro={seguro} />
             ))}

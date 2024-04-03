@@ -40,7 +40,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             />
           </div>
           <motion.div
-            className="flex justify-center items-center text-xl text-base-base bg-base-tertiary z-0 rounded-b-md"
+            className="flex justify-center font items-center text-xl text-base-base bg-base-tertiary z-0 rounded-b-md"
             animate={{ y: saberMais }}
             transition={{ duration: 0.5 }}
           >
@@ -60,13 +60,13 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             {planos.paragrafos?.map((value, index) => (
               <p
                 key={index}
-                className="indent-8 font-belleza text-left p-1 text-sm "
+                className="indent-8 font-sans text-left p-1 text-sm "
               >
                 {value}
               </p>
             ))}
             {planos.obs && (
-              <p className="font-belleza text-left font-semibold p-1 text-sm ">
+              <p className="font-sans text-left font-semibold p-1 text-sm ">
                 {planos.obs}
               </p>
             )}
@@ -80,7 +80,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             onClick={redirectToWhatApp}
             className="bg-base-tertiary p-2 w-1/2 drop-shadow-lg flex justify-center items-center cursor-pointer"
           >
-            <button className="font-belleza text-base hover: scale-105 text-white">
+            <button className="font-sans text-base hover: scale-105 text-white">
               Saber mais
             </button>
           </motion.div>

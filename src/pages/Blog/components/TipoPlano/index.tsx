@@ -46,7 +46,7 @@ export default function TipoPlanos() {
   return (
     <>
       <div className="flex flex-col gap-3 md:gap-6 max-w-full md:mt-16 mt-4">
-        <h1 className="font-belleza font-bold text-2xl text-base-base">
+        <h1 className="font-glacialIndifference font-bold text-2xl text-base-base">
           Como escolher o tipo de plano certo?
         </h1>
       </div>
@@ -73,13 +73,13 @@ export default function TipoPlanos() {
                     loader={<div className="bg-base-tertiary" />}
                   />
                 </div>
-                <h1 className="font-belleza text-xl md:text-2xl font-semibold text-base-base mt-2">
+                <h1 className="font-glacialIndifference text-xl md:text-2xl font-semibold text-base-base mt-2">
                   {beneficio.titulo}
                 </h1>
-                <h4 className="font-belleza text-base md:text-base text-base-base pl-4 md:w-11/12 text-left">
+                <h4 className="font-sans text-base md:text-base text-base-base pl-4 md:w-11/12 text-left">
                   {beneficio.descricao}
                 </h4>
-                <h6 className="hidden md:block font-belleza text-sm md:text-md italic text-base-base pl-12 pt-16 w-11/12 ">
+                <h6 className="hidden md:block font-sans text-sm md:text-md italic text-base-base pl-12 pt-16 w-11/12 ">
                   {beneficio.frase}
                 </h6>
               </div>

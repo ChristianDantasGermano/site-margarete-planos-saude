@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         belleza: ["Belleza"],
+        glacialIndifference: ["GlacialIndifference", "sans-serif"],
       },
       colors: {
         base: {

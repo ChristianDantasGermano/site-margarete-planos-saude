@@ -9,7 +9,7 @@ export default function Footer() {
           <img className="max-h-12 md:max-h-16" src={Logo} />
         </div>
         <div className="flex  flex-col justify-center items-center">
-          <h4 className="font-belleza font-normal text-sm md:text-lg">
+          <h4 className="font-glacialIndifference font-normal text-sm md:text-lg">
             Tem dúvidas? Tire todas suas dúvidas pelo WhatsApp
           </h4>
           <div
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-12">
-        <h6 className="font-belleza font-normal text-sm">
+        <h6 className="font-sans font-normal text-sm">
           2024 - Desenvolvido por Christian Dantas Germano
         </h6>
       </div>

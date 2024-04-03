@@ -61,11 +61,11 @@ export const Navbar: React.FC<Navbar> = ({ navbarIsOpen, setNavbarOpen }) => {
   return (
     <div ref={scope}>
       <div className="z-50 relative flex w-full p-2 bg-base-primary overflow-hidden drop-shadow-sm">
-        <div className="flex flex-grow justify-center text-center">
-          <div className="flex flex-grow md:flex-none place-items-center pl-4 md:mx-12">
+        <div className="flex w-full">
+          <div className="flex flex-grow md:flex-grow place-items-center pl-4 md:mx-12">
             <img className="max-h-8 md:max-h-10" src={Logo} />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex flex-none mr-12">
             <MenuDekstop />
           </div>
         </div>
