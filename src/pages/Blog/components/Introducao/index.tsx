@@ -4,13 +4,23 @@ export default function Introducao() {
   return (
     <div className="flex flex-col md:flex-row pt-2 w-full">
       <div className="flex flex-col ">
-        <h1 className="font-glacialIndifference font-bold text-2xl md:text-3xl text-base-base md:pt-4">
+        <h1 className="font-glacialIndifference font-bold text-2xl md:text-3xl text-gray-700 md:pt-4">
           Margarete planos de saúde
         </h1>
-        <h4 className="font-sans text-base  md:text-lg text-base-base mt-2 pl-2 indent-4 md:pl-4 md:w-11/12 text-justify">
+        <h4 className="font-sans text-base  md:text-lg text-gray-700 mt-2 pl-2 md:pl-4 md:w-11/12 text-justify">
           Especialista em consultoria e corretagem de planos de saúde
           individuais, familiares, por adesão e para micro, pequenas e médias
           empresas.
+        </h4>
+        <h4 className="font-sans text-base  md:text-lg text-gray-700 mt-2 pl-2 md:pl-4 md:w-11/12 text-justify">
+          No mundo complexo dos planos de saúde, é comum sentir-se perdido e
+          confuso ao navegar pelas diversas opções disponíveis. É nesse momento
+          que os corretores de planos de saúde entram em cena. Nossa empresa se
+          orgulha de oferecer uma equipe especializada de corretores dedicados a
+          ajudar você a encontrar o plano de saúde perfeito. Neste texto, vamos
+          explorar os benefícios e serviços que nossos corretores podem
+          oferecer, proporcionando uma experiência tranquila e personalizada
+          para você e sua família.
         </h4>
       </div>
       <div className="overflow-auto w-full h-full flex justify-center items-center">
