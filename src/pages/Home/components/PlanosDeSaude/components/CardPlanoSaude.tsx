@@ -40,7 +40,7 @@ const CardPlanoSaude: React.FC<CardPlanoSaude> = ({ planos }) => {
             />
           </div>
           <motion.div
-            className="flex justify-center font items-center text-xl text-base-base bg-base-tertiary z-0 rounded-b-md"
+            className="flex justify-center font items-center text-xl text-white bg-base-tertiary z-0 rounded-b-md"
             animate={{ y: saberMais }}
             transition={{ duration: 0.5 }}
           >
