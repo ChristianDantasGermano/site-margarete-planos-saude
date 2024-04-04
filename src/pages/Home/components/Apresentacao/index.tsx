@@ -1,7 +1,7 @@
 import Logo from "../../../../assets/images/logo.png";
 export default function Apresentacao() {
   return (
-    <div className="flex flex-col justify-center bg-base-base items-center p-6 mt-4 md:mt-4">
+    <div className="flex flex-col justify-center bg-white items-center p-6 mt-4 md:mt-4">
       <div className="md:grid md:grid-cols-3 gap-6 QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12 ">
         <div className="md:col-span-2 flex flex-col">
           <h4 className="font-dancingScript font-bold text-xl md:text-4xl ">

@@ -117,7 +117,7 @@ export const planoLogos = [
 
 export default function PlanoSaudeOptions() {
   return (
-    <div className="flex flex-col justify-center items-center bg-base-base p-4 px-16">
+    <div className="flex flex-col justify-center items-center bg-white p-4 px-16">
       <div className="QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 md:mt-5 md:mx-16">
           {planoLogos.map((plano, index) =>
