@@ -124,7 +124,7 @@ export const CarouselFrame: React.FC<CarouselFrame> = ({
           />
 
           <div className="hidden md:flex md:flex-col absolute bottom-10 right-0 px-6 py-4 bg-base-secondary  w-1/2 opacity-80 drop-shadow-lg rounded-s">
-            <h2 className="mb-3 text-base  font-glacialIndifference font-semibold tracking-tight text-black">
+            <h2 className="mb-3 text-base font-glacialIndifference font-bold tracking-tight text-black">
               {images[currentPage].title}
             </h2>
             <p className="leading-normal font-sans text-black text-sm">
