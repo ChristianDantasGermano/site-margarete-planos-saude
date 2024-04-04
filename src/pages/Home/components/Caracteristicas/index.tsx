@@ -32,7 +32,7 @@ export default function Caracteristicas() {
     <div className="flex flex-col justify-center items-center p-8 bg-base-tertiary opacity-90 ">
       <div className="QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12">
         <div className="flex flex-col">
-          <h4 className="font-glacialIndifference font-bold text-xl md:text-2xl text-gray-700">
+          <h4 className="font-dancingScript font-bold text-2xl md:text-4xl text-gray-700">
             Por que escolher <b>Margarete planos de saúde?</b>
           </h4>
           <p className="font-sans text-sm text-left mt-4 text-gray-700">
@@ -43,7 +43,7 @@ export default function Caracteristicas() {
           <div className="flex flex-col md:gap-4 gap-2 mt-2">
             {caracteristicas.map((value, index) => (
               <div className="flex flex-col md:gap-1" key={index}>
-                <h6 className=" text-base font-semibold font-glacialIndifference text-gray-700">
+                <h6 className="text-lg font-semibold font-dancingScript text-gray-700">
                   {value.titulo}
                 </h6>
                 <p className="pl-2 md:pl-4 text-sm  font-sans text-justify text-gray-700">

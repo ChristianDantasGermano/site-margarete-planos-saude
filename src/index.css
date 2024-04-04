@@ -1,25 +1,4 @@
-
-@layer base {
-  @font-face {
-    font-family: Belleza;
-    src: url(/Fonts/Belleza/Belleza-Regular.ttf) format("ttf");
-  }
-  @font-face {
-    font-family: GlacialIndifference;
-    font-style: normal;
-    src: url(/Fonts/GlacialIndifference/GlacialIndifference-Regular.otf) format("otf");
-  }
-   @font-face {
-    font-family: GlacialIndifference;
-    font-style: italic;
-    src: url(/Fonts/GlacialIndifference/GlacialIndifference-Italic.otf) format("otf");
-  }
-   @font-face {
-    font-family: GlacialIndifference;
-    font-weight: bold;
-    src: url(/Fonts/GlacialIndifference/GlacialIndifference-Bold.otf) format("otf");
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 @tailwind base;
 @tailwind components;

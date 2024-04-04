@@ -27,7 +27,7 @@ export const beneficiosPlanos = [
 export default function BeneficioPlanos() {
   return (
     <div className="flex flex-col gap-6 max-w-full mt-4 ">
-      <h1 className="font-glacialIndifference font-bold text-2xl text-gray-700">
+      <h1 className="font-dancingScript font-bold text-4xl text-gray-700">
         Por que escolher Margarete planos de saúde?
       </h1>
       <div className="flex flex-col px-3 md:px-6">
@@ -47,7 +47,7 @@ export default function BeneficioPlanos() {
               </IconContext.Provider>
             </div>
             <div className="flex flex-col md:mx-4">
-              <h4 className="font-glacialIndifference text-xl font-bold">
+              <h4 className="font-dancingScript text-2xl font-bold">
                 {beneficio.titulo}
               </h4>
               <p className="font-sans text-base mt-1">{beneficio.descricao}</p>

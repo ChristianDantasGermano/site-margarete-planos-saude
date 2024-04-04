@@ -4,7 +4,7 @@ export default function Apresentacao() {
     <div className="flex flex-col justify-center bg-base-base items-center p-6 mt-4 md:mt-4">
       <div className="md:grid md:grid-cols-3 gap-6 QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12 ">
         <div className="md:col-span-2 flex flex-col">
-          <h4 className="font-glacialIndifference font-bold text-xl md:text-2xl ">
+          <h4 className="font-dancingScript font-bold text-xl md:text-4xl ">
             O satisfação de nossos clientes é o que nos motiva...
           </h4>
           <p className="font-sans text-sm  mt-4 text-justify">

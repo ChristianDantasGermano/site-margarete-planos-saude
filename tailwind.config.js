@@ -12,8 +12,7 @@ export default {
         QHDPLUS: "3200px",
       },
       fontFamily: {
-        belleza: ["Belleza"],
-        glacialIndifference: ["GlacialIndifference", "sans-serif"],
+        dancingScript: ["Dancing Script"],
       },
       colors: {
         base: {
