@@ -9,7 +9,7 @@ export default function Footer() {
           <img className="max-h-12 md:max-h-16" src={Logo} />
         </div>
         <div className="flex  flex-col justify-center items-center">
-          <h4 className="font-dancingScript font-normal text-sm md:text-lg">
+          <h4 className="font-dancingScript font-normal text-base md:text-xl">
             Tem dúvidas? Tire todas suas dúvidas pelo WhatsApp
           </h4>
           <div

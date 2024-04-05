@@ -8,7 +8,7 @@ type SeguroIconIT = {
 const SeguroIcon: React.FC<SeguroIconIT> = ({ seguro }) => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center">
-      <div className="flex flex-col justify-center items-center bg-base-base rounded-full p-2 md:p-3">
+      <div className="flex flex-col justify-center items-center bg-white rounded-full p-2 md:p-3">
         <div className="hidden md:block">
           <IconContext.Provider value={{ size: "35" }}>
             {seguro.icon}

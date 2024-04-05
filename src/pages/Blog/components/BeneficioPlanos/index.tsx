@@ -33,7 +33,7 @@ export default function BeneficioPlanos() {
       <div className="flex flex-col px-3 md:px-6">
         {beneficiosPlanos.map((beneficio, index) => (
           <div
-            className="flex flex-col md:flex-row m-2 p-4 bg-base-primary rounded drop-shadow-lg"
+            className="flex flex-col md:flex-row m-2 p-4 bg-white rounded drop-shadow-lg"
             key={index}
           >
             <div className="md:hidden p-1">
@@ -47,10 +47,10 @@ export default function BeneficioPlanos() {
               </IconContext.Provider>
             </div>
             <div className="flex flex-col md:mx-4">
-              <h4 className="font-dancingScript text-3xl font-bold">
+              <h4 className="font-dancingScript text-3xl font-bold text-black">
                 {beneficio.titulo}
               </h4>
-              <p className="font-sans text-sm md:text-base mt-1">
+              <p className="font-sans text-sm md:text-base mt-1 text-black">
                 {beneficio.descricao}
               </p>
             </div>

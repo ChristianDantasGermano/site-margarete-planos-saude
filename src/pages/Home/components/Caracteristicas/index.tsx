@@ -35,7 +35,7 @@ export default function Caracteristicas() {
           <h4 className="font-dancingScript font-bold text-3xl md:text-4xl text-gray-700">
             Por que escolher <b>Margarete planos de saúde?</b>
           </h4>
-          <p className="font-sans text-sm text-left mt-4 text-gray-700">
+          <p className="font-sans text-sm text-left mt-4 text-gray-900">
             Entregamos os resultados que você busca com agilidade e
             descomplicação visando sua completa satisfação, pois, consideramos
             nossos clientes o nosso maior patrimônio.
@@ -43,7 +43,7 @@ export default function Caracteristicas() {
           <div className="flex flex-col md:gap-4 gap-2 mt-2">
             {caracteristicas.map((value, index) => (
               <div className="flex flex-col md:gap-1" key={index}>
-                <h6 className="text-lg font-semibold font-dancingScript text-gray-700">
+                <h6 className="text-lg md:text-xl font-bold font-dancingScript text-gray-700">
                   {value.titulo}
                 </h6>
                 <p className="pl-2 md:pl-4 text-sm  font-sans text-justify text-gray-700">
