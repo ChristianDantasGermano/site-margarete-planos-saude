@@ -5,7 +5,7 @@ export default function Apresentacao() {
       <div className="md:grid md:grid-cols-3 gap-6 QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12 ">
         <div className="md:col-span-2 flex flex-col">
           <h4 className="font-dancingScript font-bold text-3xl md:text-4xl ">
-            O satisfação de nossos clientes é o que nos motiva...
+            A satisfação de todos meus clientes é o que me motiva.
           </h4>
           <p className="font-sans text-sm  mt-4 text-justify">
             São 16 anos de experiencia em planos de saúde. Solidez,
