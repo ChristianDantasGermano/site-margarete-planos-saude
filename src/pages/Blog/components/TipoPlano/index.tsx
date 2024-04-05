@@ -57,7 +57,7 @@ export default function TipoPlanos() {
               {index % 2 === 0 && (
                 <div className="hidden md:flex h-full w-full max-h-[320px] max-w-[220px] ">
                   <AsyncImage
-                    className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg"
+                    className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg border-collapse border-2 border-white"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
@@ -67,7 +67,7 @@ export default function TipoPlanos() {
               <div className="flex flex-col grow p-4 ">
                 <div className="md:hidden flex h-full w-full justify-center items-center ">
                   <AsyncImage
-                    className="object-contain h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-md"
+                    className="object-contain h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-md border-collapse border-2 border-white"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
@@ -86,7 +86,7 @@ export default function TipoPlanos() {
               {index % 2 === 1 && (
                 <div className="hidden md:flex grow-0 w-full h-full max-h-[320px] max-w-[220px] ">
                   <AsyncImage
-                    className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg"
+                    className="object-cover h-screen w-full max-h-[320px] max-w-[220px] rounded drop-shadow-lg border-collapse border-2 border-white"
                     src={beneficio.image}
                     Transition={(props) => <Blur radius={10} {...props} />}
                     loader={<div className="bg-base-tertiary" />}
