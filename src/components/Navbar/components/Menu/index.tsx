@@ -25,7 +25,7 @@ const MenuMobile: React.FC<Menu> = ({ onClickMenuItem }) => {
             <li
               key={index}
               onClick={onClickMenuItem}
-              className="block  p-2 w-11/12 font-dancingScript- font-normal text-xl uppercase"
+              className="block  p-2 w-11/12 font-dancingScript font-normal text-xl uppercase"
             >
               {rota.label}
             </li>
@@ -48,7 +48,7 @@ const MenuDekstop = () => {
               transition: { duration: 0.1 },
             }}
             whileTap={{ scale: 0.9 }}
-            className="p-2 font-dancingScript font- text-lg uppercase"
+            className="p-2 font-dancingScript text-lg uppercase"
           >
             {rota.label}
           </motion.div>

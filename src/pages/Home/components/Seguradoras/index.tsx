@@ -68,7 +68,7 @@ export default function SeguradoraOptions() {
     <div className="flex flex-col justify-center items-center bg-base-tertiary p-6 md:p-10">
       <div className="md:w-8/12">
         <div className=" flex flex-col justify-center items-center">
-          <h4 className="font-dancingScript text-xl md:text-4xl text-gray-700">
+          <h4 className="font-dancingScript text-3xl md:text-4xl text-gray-700">
             Trabalhamos com todos os tipos de seguros, confira outras formas
             <b> que também podemos ajudar:</b>
           </h4>

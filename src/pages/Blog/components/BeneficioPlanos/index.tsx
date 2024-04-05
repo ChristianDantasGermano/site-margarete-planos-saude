@@ -47,10 +47,12 @@ export default function BeneficioPlanos() {
               </IconContext.Provider>
             </div>
             <div className="flex flex-col md:mx-4">
-              <h4 className="font-dancingScript text-2xl font-bold">
+              <h4 className="font-dancingScript text-3xl font-bold">
                 {beneficio.titulo}
               </h4>
-              <p className="font-sans text-base mt-1">{beneficio.descricao}</p>
+              <p className="font-sans text-sm md:text-base mt-1">
+                {beneficio.descricao}
+              </p>
             </div>
           </div>
         ))}

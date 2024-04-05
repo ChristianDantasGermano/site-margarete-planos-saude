@@ -32,7 +32,7 @@ export default function Caracteristicas() {
     <div className="flex flex-col justify-center items-center p-8 bg-base-tertiary opacity-90 ">
       <div className="QHDPLUS:w-4/12 QHD:w-6/12 md:w-8/12">
         <div className="flex flex-col">
-          <h4 className="font-dancingScript font-bold text-2xl md:text-4xl text-gray-700">
+          <h4 className="font-dancingScript font-bold text-3xl md:text-4xl text-gray-700">
             Por que escolher <b>Margarete planos de saúde?</b>
           </h4>
           <p className="font-sans text-sm text-left mt-4 text-gray-700">

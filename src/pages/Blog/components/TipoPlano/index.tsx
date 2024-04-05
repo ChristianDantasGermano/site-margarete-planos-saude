@@ -73,10 +73,10 @@ export default function TipoPlanos() {
                     loader={<div className="bg-base-tertiary" />}
                   />
                 </div>
-                <h1 className="font-dancingScript text-xl md:text-3xl font-semibold text-gray-700 mt-2">
+                <h1 className="font-dancingScript text-2xl md:text-3xl font-semibold text-gray-700 mt-2">
                   {beneficio.titulo}
                 </h1>
-                <h4 className="font-sans text-base md:text-base text-gray-700 md:w-11/12 text-left md:pt-2">
+                <h4 className="font-sans text-sm md:text-base text-gray-700 md:w-11/12 text-left md:pt-2">
                   {beneficio.descricao}
                 </h4>
                 <h6 className="hidden md:block font-sans text-sm md:text-md italic text-gray-700 pl-6 pt-12 w-11/12 ">

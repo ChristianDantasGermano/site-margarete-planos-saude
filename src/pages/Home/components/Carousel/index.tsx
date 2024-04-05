@@ -67,13 +67,13 @@ const Indicator = ({
 }) => {
   return (
     <div className="p-3 cursor-pointer" onClick={onClick}>
-      <div className="relative w-2 h-2 bg-base-base  rounded-full ">
+      <div className="relative w-2 h-2 bg-white  rounded-full ">
         {isSelected && (
           // By setting layoutId, when this component
           // is removed and a new one is added elsewhere,
           // the new component will animate out from the old one.
           <motion.div
-            className="z-10 absolute -top-2 bg-base-primary rounded-full w-2 h-1"
+            className="z-10 absolute -top-2 bg-white rounded-full w-2 h-1"
             layoutId="highlight"
           />
         )}
